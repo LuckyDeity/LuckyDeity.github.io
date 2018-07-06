@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>漫画-有妖气原创漫画梦工厂- 首页</title>
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $(' .pop_wrap ').mouseenter(function () {
+                $(this).addClass("pop_on");
+            }).mouseleave(function () {
+                $(this).removeClass("pop_on");
+            })
+        })
+        //响应式布局未成功
+        $(function () {
+            var r = document.body.offsetWidth / window.screen.availWidth;
+            $(document.body).css("-webkit-transform", "scale(" + r + ")");
+        });
+        $(window).resize(function () {
+            var r = document.body.offsetWidth / window.screen.availWidth;
+            $(document.body).css("-webkit-transform", "scale(" + r + ")");
+        });
+    </script>
+</head>
+
+<body>
+    <!--头部导航部分的开始-->
+    <div id="topbar">
+        <div class="topbar_con">
+            <div class="wrap">
+                <!--左侧栏模块-->
+                <div class="left">
+                    <!-- 首页模块 -->
+                    <div class="pop_wrap ">
+                        <a href="#" class="nav1 nav_index" style="color:#333;">首页</a>
+                    </div>
+                    <!--手机版模块-->
+                    <div class="pop_wrap">
+                        <a href="#" class="nav nav_app" target="_blank" style="color:#333;">手机版
+                            <em></em>
+                        </a>
+                        <div class="pop_box">
+                            <div class="pop_pop">
+                                <div class="bgleft">
+                                    <!--<img src="images/mobile_left.png" alt="">-->
+                                    <img src="images/QR01.png" alt="">
+                                    <!-- 华改-->
+                                </div>
+                                <!--<img src="images/app.png" alt="">-->
+                                <span>扫码下载APP</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--游戏模块-->
+                    <div class="pop_wrap ">
+                        <a href="javascript:void(0);" class="nav nav_game" target="_blank" style="color:#333;">游戏
+                            <em></em>
+                        </a>
+                        <!--<div class="pop_box" style="display:none;">-->
+                        <div class="pop_box">
+                            <div class="game_pop">
+                                <div class="game_left">
+                                    <div class="gl_title">热门游戏</div>
+                                    <div class="game_top">
+                                        <img src="images/zhenhunjie.jpg" alt="">
+                                        <a href="#" target="_blank">《镇魂街OL》</a>
+                                    </div>
+                                    <ul class="game-middle">
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <img src="images/huochairen.png" alt="">
+                                            </a>
+                                            <a href="#" target="_blank">火柴人联...</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <img src="images/joke.png" alt="">
+                                            </a>
+                                            <a href="#" target="_blank">十万个冷...</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <img src="images/city.png" alt="">
+                                            </a>
+                                            <a href="#" target="_blank">悬空城...</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="game_right">
+                                    <div class="gr_title">新游推荐</div>
+                                    <a href="#" target="_blank" class="gr_z">
+                                        <span>众神之下
+                                            <i>HOT</i>
+                                        </span>
+
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <a href="#" target="_blank" class="gr_z">
+                                        <span>悬空城
+                                            <i>HOT</i>
+                                        </span>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                            <!--右侧栏模块-->
+            <div class="fr">
+                <!--登录模块-->
+                <div id="userbar">
+                    <a href="" class="btn_login">登录
+                        <em></em>
+                    </a>
+                    <a href="" class="btn_regist">立即注册</a>
+                    <div class="pop_wrap">
+                        <div class="u_nav">
+                            <a href="" target="_blank" class="nav " style="font-size: 14px">个人中心
+                                <em></em>
+                            </a>
+                            <div class="pop_box" style="display: none">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <span>
+                                                <i>我是读者</i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <span>
+                                                <i>我是作者</i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--通知模块-->
+                <div class="pop_wrap">
+                    <a href="javascript:void(0);" class="nav notice" style="font-size: 14px">通知
+                        <div id="all_msg_box" style="display:none;">
+                            <i id="all_msg"></i>
+                        </div>
+                        <em id="tip_topem"></em>
+                        <q>|</q>
+                    </a>
+                    <div class="pop_box">
+                        <ul class="pop_box_con notice_pop cf">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>漫画更新</i>
+                                        <em class="f99">0</em>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>系统消息</i>
+                                        <em class="f99">0</em>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>短消息</i>
+                                        <em class="f99">0</em>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>@我的消息</i>
+                                        <em class="f99">0</em>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--书架模块-->
+                <div class="pop_wrap">
+                    <a href="#" target="_blank" class="nav " style="font-size: 14px">书架
+                        <em></em>
+                        <q>|</q>
+                    </a>
+                    <div class="pop_box">
+                        <div class="pop_box_con book_pop cf">
+                            <div class="tab">
+                                <a href="javascript:;" rel="recent_read">
+                                    <i>最近看的漫画</i>
+                                </a>
+                                <q></q>
+                                <a href="javascript:;" rel="recent_store" class="curr">
+                                    <i class="bor_green">我收藏的漫画</i>
+                                </a>
+                            </div>
+                            <div class="tab_con">
+                                <!--最近看的漫画-->
+                                <div style="display:none;">
+                                    <p class="loading">
+                                        <span></span>正在加载，请稍候……</p>
+                                </div>
+                                <!--我收藏的漫画-->
+                                <div>
+                                    <p class="loading">
+                                        <span></span>正在加载，请稍候……</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--充值模块-->
+                <div class="pop_wrap">
+                    <a href="" class="nav" target="_blank">
+                        <span></span>充值
+                        <em></em>
+                        <q>|</q>
+                    </a>
+                    <div class="pop_box right_pop_box" style="display:none;">
+                        <ul class="pop_box_con usercenter_pop cf">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>VIP充值</i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>妖气币充值</i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 论坛 -->
+                <div class="pop_wrap ">
+                    <a href="#" target="_blank" class="fl nav" style="font-size: 14px">论坛</a>
+                </div>
+                <!-- 作者福利 -->
+                <div class="pop_wrap " id="pull_welfare">
+                    <a href="javascript:void(0);" target="_blank" class=" nav fl" style="font-size: 14px">作者福利
+                        <em></em>
+                        <q>|</q>
+                    </a>
+                    <div class="pop_box right_pop_box" style="display:none;">
+                        <ul class="pop_box_con usercenter_pop cf">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>
+                                        <i>月票折现</i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>月票排名奖</i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span>梦想激励</i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 投稿签约 -->
+                <div class="pop_wrap  " id="pull_welfare_tougao">
+                    <a href="javascript:void(0);" target="_blank" class=" nav fl " style="font-size: 14px">投稿签约
+                        <em></em>
+                        <q>|</q>
+                    </a>
+                    <div class="pop_box" style="display: none;">
+
+                        <div class="  pop_box_con cf">
+                            <strong>你想成为有妖气的签约作者吗？那就快快给我们投稿吧！</strong>
+                            <br> 投稿需准备——
+                            <br>
+                            <i>（1）、故事大纲包括主线剧情间断性发展，起承转合。
+                                <br> （2）、本作品3、4个人设，人设要全身画到脚和鞋子。
+                                <br> （3）、往期作品。（没有可忽略~）
+                                <br> （4）、投稿作品的第一话分镜草图（至少10页连贯分镜）. 以及2-4张完成稿。
+                                <br/>
+                            </i>
+                            <strong>以上文件整理打包，发送至u17投稿邮箱:comic@u17.com</strong>
+                        </div>
+                    </div>
+
+                </div>
+                <!--上传漫画-->
+                <div class="pop_wrap">
+                    <a href="#" class="nav" target="_blank" style="font-size: 14px">上传漫画</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<!--头部导航部分的结束-->
+
+</body>
+
+</html>

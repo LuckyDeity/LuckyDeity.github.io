@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration:none;
+        }
+        .The-parent-box a:hover {text-decoration:underline;}
+        .The-parent-box ul,
+        .The-parent-box li,
+        .The-parent-box  ol {
+            list-style: none;
+            font-size: 14px;
+            line-height: 0px;
+            margin-bottom: 16px;
+            list-style: none;
+        }
+        .The-parent-box .copyright i {
+            line-height: 30px;
+        }
+        .The-parent-box ul,
+        .The-parent-box li,
+        .The-parent-box h4 {
+            color: #333;
+            font-size: 18px;
+            line-height: 18px;
+            /*margin-top: 0px;*/
+        }
+        .The-parent-box>div>ul>li>a {
+            color: #666;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        .The-parent-box>.box3{
+            height: 210px;
+            float: left;
+            margin-right: 46px;
+        }
+        .The-parent-box {
+            position: relative;
+            background-color: #efefef;
+            height: 150px;
+            width: 1140px;
+            border: 1px 0px 0px ;
+            border-color: #000;
+            padding: 30px;
+            margin: 0 auto;
+            /*top: 100%;*/
+            margin-top: 100%;
+        }
+        .The-parent-box p {
+            position: absolute;
+            background-color: #d0d0d0;
+            width: 1px;
+            height: 170px;
+            left: 391px;
+            top: 20px;
+
+
+        }
+        .The-parent-box .ul1 {
+            position: absolute;
+            left: 32px;
+
+        }
+        .The-parent-box .ul2 {
+            left: 152px;
+        }
+        .The-parent-box .ul3 {
+            left: 272px;
+        }
+        .The-parent-box .QR {
+            position: absolute;
+            left: 450px;
+            overflow:hidden;
+            height: 100px;
+        }
+
+        .The-parent-box .QR>img{
+            margin-right: 20px;
+        }
+        .The-parent-box .QR>l {
+            position: absolute;
+            font-size: 12px;
+            color: #666;
+       }
+        .The-parent-box .hezi {
+            position: relative;
+            left: 436px;
+            top: 100px;
+        }
+
+        .The-parent-box .hezi i {
+            position: absolute;
+            /*float: left;*/
+            /*margin-left: 16px;*/
+            /*margin-right: 26px;*/
+        }
+        .The-parent-box .l1 {
+            left: 5px;
+            top: 10px;
+        }
+        .The-parent-box .l2 {
+            left: 123px;
+            top: 10px;
+        }
+
+        .The-parent-box .wire {
+            left: 728px;
+        }
+        .The-parent-box .copyright {
+            position: absolute;
+            height: 120px;
+            width: 425px;
+            left: 766px;
+            top: 55px;
+        }
+        .The-parent-box i,
+        .The-parent-box a {
+            font-style:normal;
+            font-size: 10px;
+            color: #666;
+        }
+        .The-parent-box .copyright>i {
+            display:inline;
+            top: 5px;
+        }
+        .The-parent-box .axian {
+            position: absolute;
+            left: 2px;
+            margin-top: -43px;
+            top: 0px;
+        }
+        .The-parent-box .bxian {
+            position: absolute;
+            left: 127px;
+            margin-top: -43px;
+            top: 0px;
+        }
+        #boxboss {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="The-parent-box">
+    <div id="boxboss">
+        <div class="dox3">
+            <ul class="ul1  ">
+                <li><h4>关于我们</h4></li>
+                <li><a href="javascript:void(0)">关于有妖气</a></li>
+                <li><a href="javascript:void(0)">法律声明</a></li>
+                <li><a href="javascript:void(0)">招聘启事</a></li>
+                <li><a href="javascript:void(0)">更多问题</a></li>
+            </ul>
+        </div>
+        <div class="ul1 ul2 ">
+            <ul>
+                <li><h4>商务合作</h4></li>
+                <li><a href="javascript:void(0)">商场合作</a></li>
+                <li><a href="javascript:void(0)">商务合作</a></li>
+                <li><a href="javascript:void(0)">友情链接</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="ul1 ul2 ul3">
+                <li><h4>联系我们</h4></li>
+                <li><a href="javascript:void(0)">在线客服</a></li>
+                <li><a href="javascript:void(0)">官方微博</a></li>
+                <li><a href="javascript:void(0)">意见反馈</a></li>
+            </ul>
+
+        </div>
+        <p></p><p class="wire"></p>
+        <!-- 二维码-->
+
+        <div class="QR">
+
+                <img src="图片/yaoqi.png" alt=""/>
+                <img src="图片/weixin.png" alt=""/>
+                <img src="图片/zhongxian.png" alt="" class="axian">
+                <img src="图片/zhongxian.png" alt=""class="bxian">
+
+        </div>
+        <div class="hezi"><i class="l1">扫码下载APP</i><i class="l2">有妖气官网微信</i></div>
+
+        <div class="copyright">
+            <i>©2018 有妖气<a href="">http://www.u17.com</a>北京四月星空网络技术有限公司 版权所有</i>
+            <br>
+            <i>京ICP证：<a href="">14013667号</a>网络文化经营许可证：<a href="">京网文[2017]5583-660号</a></i>
+            <br>
+            <i><img src="图片/huizhang.png" alt=""/><a href="">京公网安备 11010502030487号</a></i>
+        </div>
+    </div>
+</div>
+</body>
+<script src="JS包/jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+            function heighttop() {
+                $(".axian").animate({
+                    top: 92
+                }, 1000, function () {
+                    $(".axian").animate({
+                        top: -3
+                    }, 100)
+                });
+
+                $(".bxian").animate({
+                    top: 92
+                }, 4000, function () {
+                    $(".bxian").animate({
+                        top: -2
+                    }, 600)
+                });
+            }
+
+            heighttop();
+
+    })
+
+
+
+</script>
+</html>

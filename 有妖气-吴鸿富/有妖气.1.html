@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>App下载 - 有妖气原创漫画梦工厂</title>
+    <link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .bigBox {
+            width: 100%;
+            height: 930px;
+            position: relative;
+        }
+
+        header {
+            width: 100%;
+            height: 44px;
+            background-color: #efefef;
+        }
+
+        .main {
+            width: 100%;
+            height: 720px;
+            overflow: hidden;
+        }
+
+        .main .app {
+            width: 1150px;
+            height: 548px;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 68px;
+        }
+
+        .main ul {
+            width: 634px;
+            height: 548px;
+        }
+
+        .main ul li {
+            width: 634px;
+            height: 548px;
+            float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .main ul li:nth-child(1) {
+            opacity: 1;
+        }
+
+        .main ul li:nth-child(1) img {
+            position: absolute;
+            left: 127px;
+        }
+
+        .main ul li:nth-child(2) {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .main ul li:nth-child(2) img {
+            position: absolute;
+            left: 127px;
+        }
+
+        .main ul li:nth-child(3) {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .main .btn {
+            width: 170px;
+            height: 168px;
+            position: absolute;
+            right: 73px;
+            bottom: 60px;
+        }
+
+        .main .btn a:nth-child(2) {
+            position: absolute;
+            top: 60px;
+
+        }
+
+        .main .btn a:nth-child(3) {
+            position: absolute;
+            top: 120px;
+
+        }
+
+        .main .imgTxt {
+            width: 382px;
+            height: 119px;
+            position: absolute;
+            top: 100px;
+            right: 63px;
+        }
+
+        .main .erweima {
+            width: 157px;
+            height: 189px;
+            position: absolute;
+            right: 288px;
+            bottom: 60px;
+        }
+
+        .main .erweima p {
+            font-size: 14px;
+            color: #4d4d4d;
+            text-align: center;
+            line-height: 32px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 166px;
+            position: relative;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer .copyRight {
+            display: inline-block;
+            text-align: center;
+            margin-top: 62px;
+            color: #333333;
+        }
+
+        .footer .copyRight a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .wrap {
+            height: 930px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrap ul {
+            position: absolute;
+            width: 100%;
+            height: 930px;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .wrap ul li {
+            width: 100%;
+            height: 930px;
+            position: relative;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script src="animateSlow.js"></script>
+    <script>
+        $(function () {
+            //背景 图片
+            // $("body").css("backgroundImage","url(images/img_bg_01.jpg");
+            //鼠标移入按钮
+            $(".btn1").mouseenter(function () {
+                $(".android").css({
+                    opacity: 1,
+                })
+                $(".android").siblings().css({
+                    opacity: 0,
+                })
+            })
+
+            $(".btn2").mouseenter(function () {
+                $(".iphone").css({
+                    opacity: 1,
+                })
+                $(".iphone").siblings().css({
+                    opacity: 0,
+                })
+            })
+
+            $(".btn3").mouseenter(function () {
+                $(".ipad").css({
+                    opacity: 1,
+                })
+                $(".ipad").siblings().css({
+                    opacity: 0,
+                })
+            })
+
+            $(".btn a").mouseenter(function(){
+                $(this).css({
+                    opacity:.7
+                })
+            })
+            $(".btn a").mouseleave(function(){
+                $(this).css({
+                    opacity:1
+                })
+            })
+
+            var $ul = $("wrap").children();
+            $ul.animate({
+                top: -3720,
+            }, 3700)
+
+        })
+    </script>
+</head>
+
+<body>
+    <!-- <div class="bigBox"> -->
+    
+    <header></header>
+    <div class="wrap" id="wrap">
+        <ul id="ul1">
+            <li style="background:url(images/img_bg_01.jpg) center top"></li>
+            <li style="background:url(images/img_bg_02.jpg) center top"></li>
+            <li style="background:url(images/img_bg_03.jpg) center top"></li>
+            <li style="background:url(images/img_bg_04.jpg) center top"></li>
+        </ul>
+
+
+        <div class="main">
+            <div class="app">
+                <ul>
+                    <li class="android">
+                        <img src="images/android_ti.png" alt="" />
+                    </li>
+                    <li class="iphone">
+                        <img src="images/iphone_ti.png" alt="" />
+                    </li>
+                    <li class="ipad">
+                        <img src="images/ipad.png  " alt="" />
+                    </li>
+                </ul>
+                <div class="btn">
+                    <a class="btn1" href="#">
+                        <img src="images/btn_android.png" alt="" />
+                    </a>
+                    <a class="btn2" href="#">
+                        <img src="images/btn_iphone.png" alt="" />
+                    </a>
+                    <a class="btn3" href="#">
+                        <img src="images/btn_ipad.png" alt="" />
+                    </a>
+                </div>
+                <div class="imgTxt">
+                    <a href="../other.html">
+                        <img src="images/img_txt_ti.png" alt="" />
+                    </a>
+                </div>
+                <div class="erweima">
+                    <p>扫码下载APP</p>
+                    <img src="images/erweima.png" alt="" />
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="copyRight">
+                <a href="../other.html" target="_blank">首页</a>
+                |
+                <a href="#" target="_blank">关于有妖气</a>
+                |
+                <a href="#" target="_blank">法律声明</a>
+                |
+                <a href="#" target="_blank">招聘启示</a>
+                |
+                <a href="#" target="_blank">商务合作</a>
+                |
+                <a href="#" target="_blank">广告服务</a>
+                |
+                <a href="#">帮助中心</a>
+                |
+                <a href="#" target="_blank">友情链接</a>
+                <br> Copyright©2005-2017 有妖气（
+                <a href="#" target="_blank">www.u17.com</a>） 北京四月星空网络技术有限公司&nbsp;版权所有
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- </div> -->
+    <script>
+        var ul1 = document.getElementById("ul1");
+        var moveHeight = ul1.offsetHeight;
+          //console.log(moveHeight);  
+        ul1.appendChild(ul1.children[0].cloneNode(true));
+  
+    //  setInterval(function () { 
+    //             var target = -930*4;
+    //             animate(ul1,target);
+    //      },100)
+           var target = -moveHeight * (ul1.children.length - 1);
+            animate(ul1, target);
+
+   
+    //---------------------------------------------------
+   
+    function animate(ele, target) {
+        //设置计时器之前,要清除原来的计时器
+        clearInterval(ele.timerId);
+        //设置计时器
+        ele.timerId = setInterval(function () {
+            var flag = true;
+            var current = ele.offsetTop;
+            //设计一个步长
+            //如果当前位置比目标位置要小,步长是正的; 如果当前位置比目标位置要大,步长就应该是负数.
+            var step = current > target ? -1 : 1;
+            //计算
+            current += step;
+            if (Math.abs(target - current) > Math.abs(step)) {
+                ele.style.top = current + "px";
+            } else {
+                ele.style.top = target + "px";
+                currentNew = current;
+               flag = false;
+            }
+            if(flag == false){
+                ele.style.top = 0 + "px";
+                 flag = true;
+            }
+            
+           
+        }, 50);
+    }
+    </script>
+
+</body>
+
+</html>

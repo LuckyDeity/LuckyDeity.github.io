@@ -1,0 +1,865 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>有妖气游戏中心 - 有妖气原创漫画梦工厂</title>
+<link rel="shortcut icon" href="http://www.u17.com/favicon.ico">
+	<meta name="keywords" content="有妖气游戏中心|有妖气动漫游戏|游戏中心|有妖气|动漫游戏|网页游戏|手机游戏|游戏">
+<meta name="description" content="有妖气游戏中心，中国优质的动漫游戏平台，动漫玩家的聚集地，为国内外动漫玩家提供最新最热动漫游戏，看漫画，玩动漫游戏，就在有妖气！">
+<link rel="stylesheet" type="text/css" href="css/game_v3.css">
+<!--
+<script src="js/all-min.js" type="text/javascript"></script>
+ 
+-->
+<script src="js/jquery.all.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/game_v3.js"></script>
+
+
+
+	
+
+	 <style>
+                .erweima {display:none;}
+		.ser_home_list li a font{display:none;}
+		.ser_home_list li a span{display:none;}
+                .tab_box .con_game .fl .title {   font-size: 16px;
+    font-weight: bold;
+    color: #1d5bc2;}
+	</style>
+</head>
+<body>
+	<div class="mask" style="display:none;"></div>
+	<!-- 弹窗 -->
+	<div class="dialog_box" style="display:none; width: auto;left: 50%;background: url();" >
+		<a href="javascript:;" class="close"></a>
+		<h2>游戏百科</h2>
+		<img src="images/tk_bg.jpg" height="316" width="648" alt="">
+	</div>
+	<!-- 弹窗 -->
+	<div class="topbox">
+							<!-- 顶部菜单 -->
+		<div class="header">
+			<div class="w1000 clearfix">
+				<div class="logo">
+					<a href="/"><img src="images/logo.png" height="62" width="186" alt=""></a>
+				</div>
+				<div id="nav">
+					 
+					<a href="/"><font class="tit">游戏中心</font></a>
+<!--
+					<a href="/active.html"><font class="tit">活动热点</font></a>
+					<a href="/mall.html"><font class="tit">积分商城</font></a>
+-->
+					<a href="http://pay.u17.com/gamepay/pay.php" target="_blank">充值中心</a>
+					<a href="http://bbs.u17.com/" target="_blank">游戏论坛</a>
+                                        <a href="/userInfo.html">个人中心</a>
+					<span class="line_box"></span>
+                                        <div class="game_pop" style="display: none;">
+						<a href="http://bbs.u17.com/forum.php?mod=forumdisplay&fid=110">手游</a>
+						<a href="http://bbs.u17.com/forum.php?mod=forumdisplay&fid=85">页游</a>
+					</div>
+				</div>
+				<!-- 未登录 -->
+				<div class="loginbg" >
+					<div class="login_txt">
+						<a href="javascript:;" onclick="login();">登录</a>|<a  href="javascript:;" onclick="signup();" >注册</a>
+					</div>
+					<span class="irow"></span>
+				</div>
+				<!-- 未登录 -->
+				<!-- 已登录 -->
+				<div class="loginbg logined" style="display:none">
+					<span class="irow"><s></s></span>
+					<div class="touxiang">
+						<a href="/userInfo.html"><span class="touxiangbox"><img src="" alt=""></span>
+						<span class="name"></span></a>
+					</div>
+					<div class="pop_box">
+						<a href="javascript:;" onclick="login_out();" class="tuchu">退出</a>
+						<p style="display:none">
+							初次见面，请多指教！<br />
+							赶快开始你的游戏之旅吧！
+						</p>
+						<ul class="service">
+							<li class="tit">最近登录服务器</li>
+							
+
+				 			<!--
+							<li><i></i><a href="" class="ser1">仙境物语</a> <span>></span> <a href="" class="ser2">梦游仙境</a></li>
+							-->
+						</ul>
+                                                
+                                                <div class="linklist">
+							<a href="http://pay.u17.com/gamepay/pay.php">账号充值</a>
+							<a href="http://vip.u17.com/">VIP服务</a>
+							<a href="/integral.html">积分管理</a>
+							<a href="http://user.u17.com/about/edit_password.php">账号安全</a>
+							<a href="/userInfo.html">个人资料</a>
+							<a href="/contact.html">客服中心</a>
+						</div>
+
+					</div>
+				</div>
+				<!-- 已登录 end-->
+			</div>
+			
+		</div>
+		<!-- 顶部菜单 end-->
+
+		<!-- 焦点图 -->
+		<div id="slider">
+			<div class="box">
+				<ul>
+                                       <li  class="cur"><a href="http://game.u17.com/g/zhj/" target="_blank"><img src="images/21cd0812u175bd1u1746b4u178846u17770366084c63.jpg" alt=""></a></li>
+                                       <li><a href="http://www.u17.com/z/zt/hcrlm/index.html" target="_blank"><img src="images/d0fd1c89u176318u174094u179d7cu17b7d98d2e41c2.jpg" alt=""></a></li> 
+                                       <li><a href="http://www.u17.com/z/zt/xkd/home.html" target="_blank"><img src="images/e23d0a52u1745dfu174c8du17a82du1715a0a8b1f98f.jpg" alt=""></a></li>
+                                       <li><a href="http://www.u17.com/z/zt/sl2/index.html" target="_blank"><img src="images/3eed9acbu17ecedu1742cdu178e92u17f066b0bdd2e2.jpg" alt=""></a></li>               
+                                       <li><a href="http://game.u17.com/g/mxsj/" target="_blank"><img src="images/6b6dc757u170a9bu17410cu17857eu17ee82213ca85e.jpg" alt=""></a></li>
+
+                                                    
+<!--
+				       <li><a href="http://game.u17.com/v3_act.html" target="_blank"><img src="images/cd83639du174f89u174e19u179a4du17165866273ec8.jpg" alt=""></a>
+</li>	
+<li><a href="http://bwysw.game.u17.com/" target="_blank"><img src="images/7e13bbdbu17bc53u1745edu1780dbu170f0fff6f8935.jpg" alt=""></a></li>
+-->
+				 
+				</ul>
+			</div>
+			<ol>
+				<li class="cur"></li>		
+				<li class=""></li>
+                                <li class=""></li>
+				<li class=""></li>
+                                <li class=""></li>
+                                
+			</ol>
+			<a href="javascript:;" class="prev"></a>
+			<a href="javascript:;" class="next"></a>
+		</div>
+		<!-- 焦点图 end-->
+	</div>
+	<div class="bgf1">
+		<div class="w1000">
+			<!-- 为你推荐 -->
+			 <div class="tjbox">
+				<h2><span></span>为你推荐</h2>
+				<a href="javascript:;" class="prev" elementtype="prev"></a>
+				<a href="javascript:;" class="next" elementtype="next"></a>
+				<div class="tj_img_box" elementtype="box">
+					<ul elementtype="list" style="width: 2000px; left: 0px;">
+
+																																																																																																																																																																																																			
+					<li>
+						<div class="imgbox pos_01 pos_img_1_2"><img src="images/8e6f8b27u17177du174f1eu17938bu1774aef78c468d.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/z/zt/zhj_m_game/index.html" target="_blank">游戏官网</a>
+											<span class="txt">有妖气《镇魂无双》完美还原漫画风格兼具观赏性、操作性于一身的3D动作游戏！</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_02 pos_img_1_2" style=""><img src="images/16f1dd27u1783d2u17406au17a327u1766c78228cf73.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/z/zt/sl2/index.html" target="_blank">游戏官网</a>
+											<span class="txt">《十万个冷笑话2》国漫全新手游，7月14日安卓端计费删档测试！</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_03 pos_img_2_1" style=""><img src="images/757211e9u170e4au1747c2u178b11u17e331c758f5eb.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/z/zt/wyjqs/pc_index.html" target="_blank">游戏官网</a>
+											<span class="txt">有生之年！《魔法禁书目录》出手游了！100%还原动漫！</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_04 no" style="display: none;"></div>
+						<div class="imgbox pos_05" style="display: none;"></div>
+						<div class="imgbox pos_06" style="display: none;"></div>
+						<div class="imgbox pos_07 pos_img_2_1"><img src="images/b8336f1fu17bb62u1742d4u179581u1748c39be69ff5.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://game.u17.com/g/zhj/" target="_blank">游戏官网</a>
+											<span class="txt">有妖气《镇魂街》完美还原漫画风格兼具观赏性、可玩性的角色扮演页游。</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_08" style="display: none;"></div>
+					</li>						 
+				
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+
+					</ul>
+				</div>
+			</div>
+			<!-- 为你推荐 end-->
+		</div>
+	</div>	
+	<div class="w1000">
+		<!-- tab选项卡 -->
+		<div class="tab_box">
+			<div class="tit clearfix">
+				<a href="javascript:;" class="cur">妖气游戏</a>
+				<!--<a chref="javascript:;">活动热点</a>
+				<a chref="javascript:;">积分商城</a>
+				<a chref="javascript:;"><font class="tit">客服中心</font></a>-->
+			</div>
+			<div class="conbox" style="display:block">
+				<div class="con_game clearfix">
+
+
+<div class="fl bor_r  bor_l" style="width:250px; *width:249px;" >
+						<div class="title">新游推荐</div>
+						<div class="yy clearfix">
+							<div class="list">
+								 
+<!--
+ <ul>
+                                                                  <span style="font-size:14px;"> 									
+							        
+<a href="http://zhj.game.u17.com" target="_blank"> 镇魂街</a>	
+                                                                  </span>
+                                                                 <span style="font-size:14px;color:red;padding:0px"> 									
+                                                                 （4月28日）
+                                                                  </span
+								</ul>                                                                
+                                                                
+                                                                 <ul>
+                                                                  <span style="font-size:14px;"> 
+                                                                  <a href="http://mfxy.game.u17.com" target="_blank">魔法学园</a>			
+                                                                  </span>
+                                                                 <span style="font-size:14px;color:red;padding:0px"> 									
+                                                                 （4月29日）
+                                                                  </span>
+                                                                 </ul>
+
+                                                                 <ul>
+                                                                  <span style="font-size:14px;"> 									
+							         萌娘cafe枪
+                                                                  </span>
+                                                                 <span style="font-size:14px;color:red;padding:0px"> 									
+                                                                 （4月28日）
+                                                                  </span>
+                                                                  </ul>
+
+                                                                 <ul>
+                                                                  <span style="font-size:14px;"> 									
+							         镇魂街
+                                                                  </span>
+                                                                 <span style="font-size:14px;color:red;padding:0px"> 									
+                                                                 （4月28日）
+                                                                  </span
+								</ul>
+-->
+								<ul>
+										
+
+			<li><a href="http://www.u17.com/z/zt/qrzd/index.html" target="_blank">永远的7日之都</a>
+			<i class="hot"></i>
+			</li>
+		
+			<li><a href="http://www.u17.com/z/zt/hcrlm/index.html" target="_blank">火柴人联盟2</a>
+			<i class="hot"></i>
+			</li>
+		
+			<li><a href="http://www.u17.com/z/zt/zhj_m_game/index.html" target="_blank">镇魂无双（预约）</a>
+			<i class="hot"></i>
+			</li>
+		
+			<li><a href="http://www.u17.com/z/zt/xkd/home.html" target="_blank">悬空城</a>
+			<i class="hot"></i>
+			</li>
+		
+			<li><a href="http://www.u17.com/z/zt/sl2/index.html" target="_blank">十万个冷笑话2</a>
+			<i class="hot"></i>
+			</li>
+		
+			<li><a href="http://www.u17.com/z/zt/elts/index.html" target="_blank">恶灵退散</a>
+			<i class="hot"></i>
+			</li>
+					
+								</ul>
+                                                                
+							</div>
+							
+						</div>
+
+                                                <!-- <a href="" class="hot_link"></a> -->
+					</div>	                                        
+
+
+					<div class="fl bor_r  ">
+						<div class="title">手游</div>
+						<div class="sy clearfix">
+							<div class="list  bor_r  ">
+								 
+								<ul>								
+									
+
+			<li><a href="http://www.u17.com/z/zt/sl2/index.html" target="_blank">十万个冷笑话2</a></li>
+		
+			<li><a href="http://www.u17.com/z/zt/lxhzj/index.html" target="_blank">罗小黑战记</a></li>
+						
+								</ul>
+                                                                
+							</div>
+							<div class="list">
+								 
+								<ul>
+									
+
+			<li><a href="http://www.u17.com/z/zt/xkd/home.html" target="_blank">悬空城</a></li>
+		
+			<li><a href="http://www.u17.com/z/zt/elts/index.html" target="_blank">恶灵退散</a></li>
+		
+			<li><a href="http://snkfq.game.u17.com" target="_blank">少女咖啡枪</a></li>
+		
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="fl bor_r" style="width:250px; *width:249px;">
+						<div class="title">页游</div>
+						<div class="yy clearfix">
+							<div class="list">
+								 
+								<ul>
+									
+
+			<li><a href="http://game.u17.com/g/zhj/" target="_blank">镇魂街OL</a></li>
+		
+			<li><a href="http://game.u17.com/g/zszx" target="_blank">众神之下</a></li>
+												 
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="conbox">
+
+<div class="tjbox">
+				
+				
+				
+				<div class="tj_img_box" elementtype="box">
+					<ul elementtype="list" style="width: 2000px; left: 0px;">
+
+					 
+			 																																																																																					
+
+<li>
+						<div class="imgbox pos_01 pos_img_1_2"><img src="images/ec28a76eu174c05u174492u17b1d4u17322ada4bf066.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt">有妖气《EVA：破晓》公测预约开启！使徒来袭，指尖激战！</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_02 pos_img_1_2" style=""><img src="images/a8ca5406u17d872u174e65u1788d0u17b03103132a14.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt">有妖气《航海王激战》公测预约开启，海迷大集结！</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_03 pos_img_2_2" style=""><img src="images/c22b9ddau171c83u174b0du17b23fu17929fce8bbb84.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt">成圣归来 重踏凌霄</span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_04" style="display: none;"></div>
+						<div class="imgbox pos_05" style="display: none;"></div>
+						<div class="imgbox pos_06" style="display: none;"></div>
+						<div class="imgbox pos_07" style="display: none;"></div>
+						<div class="imgbox pos_08" style="display: none;"></div>
+					</li>
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 	
+			
+			 
+
+					</ul>
+				</div>
+			</div>
+
+
+			</div>
+			<div class="conbox">
+
+<div class="tjbox">
+				
+				
+				
+				<div class="tj_img_box" elementtype="box">
+					<ul elementtype="list" style="width: 2000px; left: 0px;">
+
+					 
+			 																																																												
+
+<li>
+						<div class="imgbox pos_01 pos_img_1_2"><img src="images/a883e466u174639u174ef4u17929cu17f33edda79220.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt"></span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_02 pos_img_1_2"><img src="images/4b61762bu175ae3u174292u1789ecu1791132b6e0f83.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt"></span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_03 pos_img_2_1"><img src="images/4bcb70a2u17ccb1u174859u17ab01u17a03be89f49ca.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt"></span>
+										</div>
+									</div>
+				</div></div>
+						<div class="imgbox pos_04" style="display: none;"></div>
+						<div class="imgbox pos_05" style="display: none;">
+								<img src="images/0d7b4990u17a8efu17436eu17bb09u1704c5b3622852.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://djsy.game.u17.com/" target="_blank">游戏官网</a>
+                                                                                       
+										</div>
+									</div>
+								</div>
+							</div>
+						<div class="imgbox pos_06" style="display: none;"></div>
+						<div class="imgbox pos_07 pos_img_1_1"><img src="images/26599e3au17f8e9u174103u17a8e1u17b9fe00fd84ff.jpg" alt="">
+								<span class="ico ico_yy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<!-- <a href="javascript:;">开始游戏</a> -->
+											<span class="txt"></span>
+										</div>
+									</div>
+		</div></div>
+						<div class="imgbox pos_08 pos_img_1_1"><img src="images/c0d71359u17f31au174a24u17bcf5u17bc24dc0beb9a.jpg" alt="">
+								<span class="ico ico_sy"></span>
+								<div class="bg" style="overflow: hidden; height: 0px;">
+									<div class="table_box">
+										<div class="table_cell">
+											<a href="http://www.u17.com/" target="_blank">点击参与</a>
+											<span class="txt"></span>
+										</div>
+									</div>
+				</div></div>
+					</li>
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 
+			
+			 	
+			
+			 
+
+					</ul>
+				</div>
+			</div>
+			</div>
+			<div class="conbox">
+				<div class="con_game">
+					<ul class="kfcenter clearfix">
+						<li class="bor_r bor_b">
+							<a href="/entrust.html" class="kf01"></a>
+						</li>
+						<li class="bor_r bor_b"><a href="/unaddicted.html" class="kf02"></a></li>
+						<li class="bor_b"><a href="http://pay.u17.com/gamepay/pay.php" class="kf03"></a></li>
+						<li class="bor_r"><a href="" class="kf04"></a></li>
+						<li class="bor_r"></li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+		<!-- tab选项卡 end-->
+	</div>	
+	<div class="bgf1 mt20">
+		<div class="w1000">
+			<div class="ser_home">
+				<h2><span></span>服务大厅</h2>
+				<ul class="ser_home_list clearfix">
+					<li>
+						<a href="http://game.u17.com/userInfo.html" target="_blank">个人中心
+							<font class="tit" style="font-size:25px;padding:15px">个人中心</font>
+							 
+						</a>
+					</li>
+<!--
+					<li>
+					<a href="">VIP服务
+						<font class="tit" style="font-size:25px;padding:15px">VIP服务</font>
+						 
+					</a>
+					</li>
+					<li>
+					<a href="">账号申请
+						<font class="tit" style="font-size:25px;padding:15px">账号申请</font>
+						 
+					</a>
+					</li>
+-->
+					<li>
+					<a href="http://pay.u17.com/gamepay/pay.php" target="_blank">游戏充值
+						<font class="tit" style="font-size:25px;padding:15px">游戏充值</font>
+						 
+					</a>
+					</li>
+					<li>
+					<a href="">在线客服
+						<font class="tit" style="font-size:25px;padding:15px">在线客服</font>
+						 
+					</a>
+					</li>
+<!--
+					<li>
+					<a href="">我的问题
+						<font class="tit" style="font-size:25px;padding:15px">我的问题</font>
+						 
+					</a>
+					</li>
+					<li>
+					<a href="">游戏百科
+						<font class="tit" style="font-size:25px;padding:15px">游戏百科</font>
+						 
+					</a>
+					</li>
+-->
+<!--
+					<li>
+					<a href="http://bbs.u17.com/" target="_blank">游戏论坛
+						<font class="tit" style="font-size:25px;padding:15px">游戏论坛</font>
+						 
+					</a>
+					</li>
+-->
+                                         <li class="ser_home_luntan">
+						<span class="">游戏论坛</span>
+						<p class="cur">
+							<a href="http://bbs.u17.com/forum.php?mod=forumdisplay&fid=110" target="_blank">手游</a><font>|</font><a href="http://bbs.u17.com/forum.php?mod=forumdisplay&fid=85" target="_blank">页游</a>
+						</p>
+					</li>
+				 
+				</ul>
+			</div>
+			<div class="contact">
+				<span>客服电话：010-67717717-8134</span>
+				<span>客服QQ：<a href="javascript:void(0);" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=800002671&eid=2188z8p8p8p8p8K8x8y8q&o=www.u17.com&q=7', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" target="_blank">800002671</a> </span>
+				<span>邮箱：game@u17.com</span>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<a href="javascript:;" class="goTop"></a>
+		<div class="w1000">
+			<div class="botbox"></div>
+			<div class="bot_logo">
+				<img src="images/bot_logo.png" height="52" width="163" alt="">
+				<span class="line_r"></span>
+                                <img src="images/bbb071ceu1718a1u174b3cu17978au17f607a9e6a7ad.png" height="42" width="42" alt="">
+			</div>
+			<div class="footer_txt" style="width:600px">
+<!--
+			    <a target="_blank" href="http://www.u17.com/z/help/about_intro.html">关于有妖气</a>
+
+
+|<a target="_blank" href="http://www.u17.com">妖气漫画</a>
+|<a target="_blank" href="http://www.u17.com/z/zt/games/jiazhang.html">未成年人家长监护</a>|<a target="_blank" href="http://www.u17.com/z/help/faq.html">帮助中心</a>|<a target="_blank" href="http://bbs.u17.com/forumdisplay.php?fid=85">意见反馈</a>|<a target="_blank" href="http://www.u17.com/z/help/about_contactus.html">联系我们</a>
+			<div style="display:none;">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259615078'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259615078' type='text/javascript'%3E%3C/script%3E"));
+
+//声明_czc对象:
+var _czc = _czc || [];
+	//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+_czc.push(["_setAccount", "1259615078"]);
+</script>
+</div>
+
+			    <p>北京四月星空网络技术有限公司    京ICP备09080292号 </p>
+-->
+                           <a target="_blank" href="http://www.u17.com">妖气漫画</a>|
+                           <a target="_blank" href="http://www.u17.com/z/zt/games/jiazhang.html">未成年人家长监护</a>| 
+                           <a target="_blank" href="http://www.u17.com/z/help/faq.html">帮助中心</a>|
+                           <a target="_blank" href="http://www.miibeian.gov.cn/">京ICP备09080292号</a>|
+                           <a target="_blank" href="http://static.u17i.com/zt/images/zhengjian/wenwen2015.jpg">京网文[2015]0019-019号</a>
+			<div style="display:none;">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259615078'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259615078' type='text/javascript'%3E%3C/script%3E"));
+
+//声明_czc对象:
+var _czc = _czc || [];
+	//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+_czc.push(["_setAccount", "1259615078"]);
+</script>
+</div>
+
+                           <p>Copyright©2005-2017 有妖气（www.u17.com） 北京四月星空网络技术有限公司 版权所有</p>
+			   <p>抵制不良游戏，拒绝盗版游戏。 注意自我保护，谨防受骗上当。<br>
+                              适度游戏益脑，沉迷游戏伤身。 合理安排时间，享受健康生活。</p>
+			</div>
+		</div>
+	</div>
+<div class="erweima">
+		<img src="images/erweima.jpg" height="126" width="128" alt="">
+	</div>
+ 
+
+
+		
+	<script type="text/javascript">
+	$(function(){
+		/*轮播图*/
+		var oSlider=$('#slider');
+		slider(oSlider);
+		/*导航跟随*/
+
+		var oNav=$('#nav')[0];
+		var aNava=oNav.getElementsByTagName('a');
+		var olineBox=$('#nav span')[0];
+		
+		for(var i=0;i<aNava.length;i++)
+		{
+			aNava[i].onmouseover=function ()
+			{
+				startMove(olineBox, this.offsetLeft);
+			};
+		}
+
+		/*导航下拉*/
+		$('.logined').hover(function(){
+			$(this).find('.pop_box').slideDown();
+		},function(){
+			$(this).find('.pop_box').slideUp();
+		})
+
+		/*为你推荐轮播图*/
+		var oTj=$('.tjbox').eq(0);
+		turnScroll(oTj,1,0);
+		/*为你推荐 活动热点 积分商城 鼠标滑过 出现下拉黑框*/
+		$('.tjbox li .imgbox,.hdrd li,.jfmall li').hover(function(){
+			$(this).find('.bg').stop().animate({'height':'100%'}).addClass('cur');
+		},function(){
+			$(this).find('.bg').stop().animate({'height':'0'}).removeClass('cur');
+		})
+
+		/*tab选项卡*/
+		var tabOpt={
+			tabs: $('.tab_box .tit a'),
+			tabInfo: $('.tab_box .conbox'),
+			activeClass: 'cur',
+			eventName: 'click'
+		}
+		//changeTab(tabOpt) ;
+		/*返回顶部*/
+		$('.goTop').click(function(event) {
+			$('html,body').animate({scrollTop:'0'},800);
+		});
+		
+		
+		
+		var mask = $('div.mask'),dialog_box =  $('div.dialog_box'),taba = $('div.tab_box div.tit a'), conbox = $('div.conbox');
+		$('div.dialog_box a.close').click(function(){
+			dialog_box.hide();		
+			mask.hide();		
+		});
+		
+		 
+		taba.click(function(){
+		 	var _this = $(this), ind = taba.index(_this);
+		 	if(_this.find('font').size()>0){
+		 	    dialog_box.find('h2').text(_this.find('font.tit').text());						 
+			    mask.show();
+			    dialog_box.show();
+		 	    return false;
+		 	}
+		 	taba.removeClass('cur');
+		 	_this.addClass('cur');
+			conbox.hide();
+			conbox.eq(ind).show();
+		});
+
+		
+		$('.ser_home_luntan').hover(function() {
+			$(this).find('span').addClass('cur');
+			$(this).find('p').removeClass('cur');
+		}, function() {
+			$(this).find('span').removeClass('cur');
+			$(this).find('p').addClass('cur');
+		});
+		 
+                
+		
+	})
+	</script>
+
+
+
+
+</body>
+</html>

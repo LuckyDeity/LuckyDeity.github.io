@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会员登录 - 有妖气原创漫画梦工厂</title>
+    <link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="登入页面的css.css"/>
+    <!--<script src="登入页面的js.js"></script>-->
+    <script src="jq/jquery-1.12.4.js"></script>
+    <script>
+        //背景的移动
+        $(function() {
+            $(" .background img").animate({
+                marginTop: -160
+            }, 1000)
+
+//            /*邮箱,手机,用户名 进入焦点时触发*/
+            $(".usName").focus(function(){
+//                alert("我被点击了");
+                //通过input获取这个盒子,改变框的颜色(父亲)
+                $(this).parent().css({
+                    borderColor: "#9de3ee",
+                })
+                //获取文本框,清空文字
+                var oldValue = $(this).val();
+                if (oldValue == this.defaultValue) {
+                    $(this).val("");
+                }
+                //通过input获取背景精灵图,改变位置(兄弟)
+                $(this).siblings().css({
+                    backgroundPositionY:-43,
+                    backgroundPositionX:-0,
+                })
+            })
+        /*失去焦点时触发*/
+        $(".usName").blur(function () {
+            var oldValue = $(this).val();
+            if (oldValue == "") {
+                $(this).val(this.defaultValue);
+                $(this).parent().css({borderColor: "#c2c2c2",});
+                $(this).siblings().css({backgroundPositionY:0,
+                    backgroundPositionX:-0,})
+            }
+        });
+
+            /*密码 进入焦点时触发*/
+            $(".password").focus(function(){
+//                alert("我被点击了");
+                //通过input获取这个盒子,改变框的颜色(父亲)
+                $(this).parent().css({
+                    borderColor: "#9de3ee",
+                })
+                //获取文本框,清空文字
+                $(this).removeAttr("placeholder");
+                var oldValue1 = $(this).val();
+                if (oldValue1 == this.defaultValue) {
+                    $(this).val("");
+                }
+
+                //通过input获取背景精灵图,改变位置(兄弟)
+                $(this).siblings().css({
+                    backgroundPositionY:-128,
+                    backgroundPositionX:-0,
+                })
+            })
+            /*失去焦点时触发*/
+            $(".password").blur(function () {
+                $(this).attr("placeholder","密码");
+                var oldValue1 = $(this).val();
+                if (oldValue1 == "") {
+                    $(this).parent().css({borderColor: "#c2c2c2",});
+                    $(this).siblings().css({backgroundPositionY:-85,
+                        backgroundPositionX:-0,
+                    })
+                }
+            });
+
+           // 记住登录状态
+        $(".checkbox").click(function(){
+            $(this).toggleClass("icn")
+            });
+
+            //登录框
+            $(".login").mouseenter(function(){
+                $(this).addClass("loginStyle")
+            })
+            $(".login").mouseleave(function(){
+                $(this).removeClass("loginStyle")
+            })
+
+            //记住密码
+            $(".login_link_list").children().last().mouseenter(function(){
+                $(this).addClass("one");
+                $(this).siblings().removeClass("one");
+            })
+            $(".login_link_list").children().first().mouseenter(function(){
+                $(this).addClass("one");
+                $(this).siblings().removeClass("one");
+            })
+//            $(".login_link_list").children().last().mouseenter(function(){
+//                $(this).addClass("one");
+//            })
+            $(".login_link_list").children().mouseleave(function(){
+//                $(this).addClass("one");
+                $(this).removeClass("one");
+            })
+//            $(".login_link_list").children().last().mouseleave(function(){
+//                $(this).removeClass("one")
+//            })
+
+            //
+            $(window).ready(function(){
+                var flag = 0;
+                var width = $(window).width();
+                if(width > 1730){
+                    $(".w").css({
+                        width: width
+                    })
+                    flag = 1;
+                }else if(width < 1366){
+                    $(".w").css({
+                        width: width
+                    })
+                    flag = 2;
+                }else {
+                    $(".w").css({
+                        width: width
+                    })
+                    flag = 3;
+                }
+
+                if(flag == 1){
+                    $(window).resize(function (){
+                        var width = $(this).width();
+                        if(width >= 1750){
+                            $(".w").width(width);
+                        }
+                    })
+                    flag = 0;
+                }else if(flag == 3){
+                    $(window).resize(function (){
+                        var width = $(this).width();
+                        if(width >= 1550){
+                            $(".w").width(width);
+                        }
+                    })
+                    flag = 0;
+                }else {
+                    $(window).resize(function (){
+                        var width = $(this).width();
+                        if(width <= 1366){
+                            $(".w").width(width);
+                        }
+                    })
+                    flag = 0;
+                }
+            })
+    })
+
+    </script>
+</head>
+<body>
+<!--登入页面-->
+<div class="w">
+    <!--背景图片-->
+    <div class="background">
+        <!--<div class="one"><img src="images/login_bg.jpg" class="w" alt=""/></div>-->
+        <img src="images/login_bg.jpg" class="w" alt=""/>
+
+    </div>
+    <!-- 登入框-->
+    <div class="enter">
+        <div class="enterBoxOne">
+            <!-- 顶部有妖气logo-->
+            <a href="../other.html" class="enter_logo"></a>
+
+            <!-- 输入框-->
+            <div class="inputUsreName">
+                <input type="text" class="usName" value="邮箱/手机/用户名"/>
+                <div class="spriteSheetRen"></div>
+            </div>
+
+            <!-- 密码框-->
+            <div class="inputPassword">
+                <input type="password" class="password" placeholder="密码"/>
+
+                <div class="spriteSheetLock "></div>
+            </div>
+
+            <!--记住登录-->
+            <div class="remember_login">
+                <i class="checkbox icn"></i>
+
+                <p>记住登录状态一个月</p>
+            </div>
+
+            <!-- 登入按钮-->
+            <a href="#" class="login">登 录</a>
+
+            <!-- 忘记密码-->
+            <div class="login_link_list">
+                <a href="#">忘记密码? </a>
+                |
+                <a href="#">新用户注册</a>
+            </div>
+        </div>
+
+        <!--下面的精灵图 -->
+        <div class="login_wrapper">
+            <span class="One_click_login">一键登录</span>
+            <ul class="login_list">
+                <li class="qq">
+                    <a href="#"><img src="images/login_icon_qq.jpg" alt="" title="腾讯QQ登录"/></a>
+                </li>
+                <li class="wx">
+                    <a href="#"><img src="images/login_icon_wx.png" alt="" title="微信登录"/></a>
+                </li>
+                <li class="sina">
+                    <a href="#"><img src="images/login_icon_sina.jpg" alt="" title="新浪微博登录"/></a>
+                </li>
+                <li class="sdo">
+                    <a href="#"><img src="images/login_icon_sdo.jpg" alt="" title="盛大登录"/></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+

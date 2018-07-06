@@ -1,0 +1,110 @@
+﻿/* 
+兼容 v4版本 basic css文件
+需要修改直接修改 v5下边的basic.css文件
+当前文件不需要全都引用
+*/
+
+/*
+页面 z-index -- 20；
+top_bar z-index -- 50；
+弹窗  z-index -- 60
+回到顶部 z-inde -- 30
+ */
+
+/*reset*/
+@charset "UTF-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body{font:12px/24px "宋体",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#333;text-decoration:none;outline:none;}
+a:hover{color:#333;text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+em，address,cite,dfn,em,i{font-style:normal;}
+ul,ol{list-style:none;}
+img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+p{word-wrap:break-word;}
+fieldset,img{border:0;}
+.clearfix::after{content:'';display:block;height:0;clear:both;}
+.clearfix{zoom:1;}
+.clear{clear:both;height:0;line-height:0;font-size:0;visibility:hidden;overflow:hidden;}
+::selection{background-color:#67a414;color:#fff;}
+::-moz-selection{background-color:#67a414;color:#fff;}
+
+/*common*/
+.fl{float:left;}
+.fr{float:right;}
+.fb{font-weight:bold!important;}
+.overflow{overflow:hidden;}
+.hide{display:none;}
+.show{display:block;}
+.ib{display:inline-block;}
+.rank_num{width:16px;height:16px;background:#eeeeee;line-height:16px;text-align:center;color:#333;}
+.rank_num_orange{background:#ff7200;color:#fff;}
+.red{color: #ff585d!important;}
+#topbar .wrap{width: 1200px;}
+
+/*背景图设置广告图片*/
+.bg_ad{position:absolute;height:650px;display:block;top:270px;left:0;width:100%;z-index:1;background:url(../images/2017-11_8_bg.png) center center no-repeat;}
+
+/*回顶部*/
+.go_top{width:57px;height:225px;position:fixed;left:50%;margin-left:610px;bottom:30px;z-index:30;display:none;}
+.go_top .top_head{width:57px;height:63px;background:url(../images/gotop1.png) no-repeat 0px 4px;}
+.go_top .top_click{width:57px;height:25px;background:url(../images/gotop1.png) no-repeat 0px -59px;cursor:pointer;}
+.go_top .top_click:hover{background:url(../images/gotop2.png) no-repeat 0px -59px;}
+.go_top .top_code{width:57px;height:43px;background:url(../images/gotop1.png) no-repeat 0px -87px;cursor:pointer;position:relative;}
+.go_top .top_code:hover{background:url(../images/gotop2.png) no-repeat 0px -88px;}
+.go_top .top_code:hover .erweima_box{display:block;}
+.go_top .top_write{width:57px;height:43px;background:url(../images/gotop1.png) no-repeat 0px -133px;cursor:pointer;}
+.go_top .top_write:hover{background:url(../images/gotop2.png) no-repeat 0px -134px;}
+.go_top .erweima_box{width:137px;height:128px;position:absolute;left:-134px;top:-42px;background:url(../images/fixed_ewm_box.png) no-repeat;box-sizing:border-box;padding:6px 0 0 5px;display:none;}
+.go_top .top_service{float: left;width: 57px;height: 43px;background:url(../images/gotop1.png) no-repeat 0px -180px;}
+.go_top .top_service:hover{float: left;background:url(../images/gotop2.png) no-repeat 0px -181px;}
+/*条漫ico*/
+.ico_tiaoman{position:absolute;width:42px;height:42px;background:url(../images/main_pic_1.png) no-repeat 0 -351px;right:0px;top:0;z-index:2;}
+/*导航*/
+#v5_nav{width:100%;height:42px;background:#3a3a3a;}
+#v5_nav .nav{width:1200px;margin:0 auto;height:42px;}
+#v5_nav .nav a{float:left;color:#fff;padding:0 22px;position:relative;line-height:42px;font-size:16px;}
+#v5_nav .nav a:first-of-type{margin-left:7px;}
+#v5_nav .nav a:hover,#v5_nav .nav .current{color:#89d38f;}
+#v5_nav .nav q{height:14px;width:0;border-left:1px solid #2e2e2e;border-right:1px solid #424242;float:left;margin-top:15px;}
+#v5_nav .nav q::after{content:"";}
+#v5_nav .nav q::before{content:'';}
+.update_v5Box{position:absolute;width:100px;height:30px;left:60px;margin-left:-50px;top:-15px;text-align:center;}
+.update_v5{height:18px;line-height:18px;background-color:#ff0000;border-radius:5px 5px 5px 0px;font-size:12px;text-align:center;color:#fff;filter:alpha(opacity=75);-moz-opacity:0.75;opacity:0.75;padding:0 3px;}
+
+/*搜索*/
+.search_box{margin-right:15px;}
+.search_box input{resize:none;outline:none;}
+.search_box .search{width:183px;height:24px;border:1px solid #dddddd;border-radius:2px 0 0 2px;margin-top:8px;padding-left:10px;}
+.search_box .search_btn{float:left;width:47px;height:26px;background:url(../images/pic_header.png) no-repeat -250px -100px;border:none;cursor:pointer;margin-top:8px;}
+
+/*看过的*/
+#readed_box{width:100%;background:#f3f3f3;height:32px;}
+#readed_box .readed{background:#f3f3f3;height:32px;padding:0 15px;color:#666;width:1200px;margin:0 auto;}
+.readed .left{float:left;background-position:-21px -188px;padding-left:17px;font:14px/30px "Microsoft Yahei";}
+.readed .left a{color:#ff7a21;}
+.readed .left .f_green{color:#58900d;}
+.readed .left{float:left;background-position:-21px -188px;padding-left:17px;font:14px/30px "Microsoft Yahei";background-repeat:no-repeat;}
+.readed .left span{margin:0 10px;}
+.readed .fr a{color:#ff7a21;line-height:32px;}
+
+/*页脚*/
+.v5_footer{width:100%;padding:20px 0px 20px 0px;background:#efefef;margin-top:50px;border-top:2px solid #e7e6e6;font-family:"Microsoft YaHei","黑体";}
+.v5_footer .v5_footer_inner{width:1200px;margin:0 auto;}
+.v5_footer dl{float:left;width:120px;}
+.v5_footer dt{height:42px;line-height:42px;font-size:16px;color:#333333;font-weight:bold;}
+.v5_footer dd{height:32px;line-height:32px;font-size:14px;color:#666;}
+.v5_footer dd a{color:#666;}
+.v5_footer dd a:hover{text-decoration:underline;}
+.v5_footer_inner .first_dl{margin-left:30px;}
+.v5_footer_inner .halving_line{height:170px;width:1px;border-left:1px solid #d0d0d0;}
+.v5_footer_inner .copyright{margin:25px 0 0 38px;line-height:35px;color:#666666;}
+.v5_footer_inner .copyright a{color:#666;}
+.v5_footer_inner .copyright a:hover{color:#666;text-decoration:underline;}
+.v5_footer_inner .copyright img{margin-right:5px;}
+.v5_footer_inner .erweima{width: 335px;height: 170px;}
+.v5_footer_inner .erweima .app{margin-left: 57px;}
+.v5_footer_inner .erweima .weixin{margin-left: 20px;}
+.v5_footer_inner .erweima img{width: 100px;height: 100px;display: block;margin-top: 10px;}
+.v5_footer_inner .erweima p{width: 100px;text-align: center;line-height: 24px;color: #666666;}

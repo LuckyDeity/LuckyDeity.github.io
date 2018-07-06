@@ -1,0 +1,723 @@
+﻿/* @charset "utf-8"; */
+/*公共样式部分*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/22px "宋体";
+    /*width: 1200px;*/
+    /*!*height: 100%;*!*/
+}
+em, i {
+    font-style: normal;
+}
+blockquote, q {
+    quotes: none;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+a.u {
+    text-decoration: underline;
+}
+html {
+    overflow-y: scroll;
+}
+.clear {
+    background: none;
+    border: 0;
+    clear: both;
+    display: block;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+.cf {
+    *display: inline-block;
+    *zoom: 1
+}
+.cf:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.f99 {
+    color: #999 !important
+}
+.wrap {
+    /* width: 1200px; */
+    margin: 0 auto;
+    position: relative;
+}
+.ico {
+    background: url(../images/cs_ico.png) no-repeat;
+    display: inline-block;
+    vertical-align: text-bottom
+}
+
+#nav{
+    width: 100%;;
+    /* min-width: 960px; */
+
+}
+/*导航栏部分*/
+#topbar {
+    background: url(../images/top_line.png);
+    padding-top: 3px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    z-index: 50;
+    height: 44px;
+    /*下面是给Ie6设置的*/
+    _position: absolute;
+    _top: expression(documentElement.scrollTop)
+}
+.topbar_con {
+    background: url(../images/cs_topbar.png);
+    height: 44px;
+    width: 100%;
+}
+#topbar .left {
+    float: left
+}
+/*公共部分*/
+#topbar .nav {
+    background: url(../images/cs_topbar.png) no-repeat;
+    padding: 0 16px 0 25px;
+    float: left;
+    height: 44px;
+    font: 13px/44px "Microsoft Yahei"
+}
+#topbar .left .nav {
+    background: url(../images/cs_topbar.png) no-repeat;
+    padding: 0 16px 0 25px;
+    float: left;
+    height: 44px;
+    font: 14px/44px "Microsoft Yahei"
+}
+/*左边手机版和游戏版鼠标经过的时候设置*/
+#topbar .pop_on .nav {
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #5c5c5c
+}
+/*导航栏的em的设置*/
+#topbar .nav em {
+    position: absolute;
+    z-index: 10;
+    right: 5px;
+    top: 21px;
+    border-color: #9f9f9f transparent transparent;
+    border-style: solid dashed dashed;
+    border-width: 3px 3px 0;
+    font-size: 0;
+    height: 0;
+    width: 0;
+    line-height: 0;
+}
+/*导航栏鼠标经过的时候的em的设置*/
+#topbar .pop_on .nav em {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .25s ease 0s;
+    -moz-transition: all .25s ease 0s;
+    -o-transition: all .25s ease 0s;
+    transition: all .25s ease 0s;
+}
+/*鼠标经过时候的竖线设置*/
+#topbar .pop_on q {
+    color: #5c5c5c
+}
+/*导航pop_wrap全局设置*/
+#topbar .pop_wrap {
+    position: relative;
+    float: left;
+    margin-right: 12px
+}
+/*导航pop_box全局设置*/
+#topbar .pop_box {
+    position: absolute;
+    left: 0;
+    top: 47px;
+    padding-top: 6px;
+    display: none
+}
+
+
+/*左侧模块开始*/
+
+/*首页模块设置开始*/
+#topbar .nav1 {
+    background: url(../images/cs_topbar.png) no-repeat;
+    padding: 0 16px 0 25px;
+    float: left;
+    height: 44px;
+    font: 14px/44px "Microsoft Yahei";
+}
+/*首页模块鼠标经过设置*/
+#topbar .pop_on .nav1 {
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #5c5c5c
+}
+#topbar .left .nav_index {
+    background-position: 10px -592px;
+    padding: 0 16px 0 29px;
+    color: #11cd6e;
+}
+/*这里的有问题待修改，不影响效果*/
+#topbar .left .pop_on  .nav_index{
+    background-position: 10px -660px;
+    border-bottom: 2px solid #11cd6e;
+    color: #fff;
+    background-color: #2e2e2e;
+}
+/*为jq单独拿出来设置的不要删除*/
+.pop_on {
+    /*background-position: 10px -660px;*/
+    border-bottom: 2px solid #11cd6e;
+    color: #fff;
+    background-color: #2e2e2e;
+}
+/*首页模块设置结束*/
+
+
+/*手机版模块开始*/
+#topbar .left .nav_app {
+    background-position: 5px -47px;
+    color: #11cd6e
+}
+#topbar .left .pop_on .nav_app {
+    background-position: 5px -82px;
+    border-bottom: 3px solid #3aceb2
+}
+#topbar .left .nav_app {
+    background-position: 2px -85px;
+}
+#topbar .left .nav_app {
+    background-position: 5px -47px;
+    color: #11cd6e
+}
+#topbar .left .pop_on .nav_app {
+    background-position: 5px -82px;
+    border-bottom: 3px solid #3aceb2
+}
+/*手机版模块结束*/
+
+
+/*游戏模块开始*/
+#topbar .left .pop_on .nav_game {
+    background-position: 4px -362px;
+    border-bottom: 3px solid #ff5c5f
+}
+#tip_topem {
+    display: block !important;
+}
+#topbar .left .nav_game {
+    background-position: 4px -327px;
+
+}
+#topbar .game_pop{
+    width: 440px;
+    height: 252px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+}
+#topbar .game_pop.game_left{
+    float: left;
+    position: relative;
+    width: 265px;
+    height: 219px;
+    padding-top: 31px;
+    background: url("../images/border.jpg") right center no-repeat;
+}
+#topbar .game_pop .gl_title{
+    position: absolute;
+    width: 73px;
+    height: 24px;
+    background: url("../images/game.png");
+    left:-6px;
+    top:2px;
+    line-height: 24px;
+    padding-left: 12px;
+    color: #fff;
+
+}
+#topbar .game_pop .game_top {
+    width: 220px;
+    margin-left: 18px;
+    line-height: 24px;
+    margin-top: 25px;
+}
+#topbar .game_pop .game_top img{
+    width: 220px;
+    display: block;
+    height: 110px;
+}
+#topbar .game_pop .game-middle{
+    width:100%;
+    margin-top: 3px;
+    margin-left: 18px;
+}
+#topbar .pop_on .nav {
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #5c5c5c
+}
+#topbar .left .pop_on .nav_game {
+    background-position: 4px -362px;
+    border-bottom: 3px solid #ff5c5f
+}
+#topbar .game_pop .game-middle li{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-right: 19px;
+    text-align: center;
+}
+#topbar .game_pop .game-middle li img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 6px;
+}
+#topbar .game_pop .game_right{
+    float: right;
+    position: relative;
+    z-index: 2;
+    width: 175px;
+    height: 234px;
+
+}
+#topbar .game_pop .gr_title{
+    position: absolute;
+    width: 73px;
+    height: 24px;
+    background: url("../images/game.png");
+    left:-6px;
+    top:2px;
+    line-height: 24px;
+    padding-left: 12px;
+    color: #fff;
+    margin-top: -165px;
+}
+#topbar .game_pop .gr_title .gr_z{
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    color: #333;
+    padding-left: 15px;
+    width: 160px;
+    /*vertical-align: middle;*/
+}
+#topbar .game_pop .gr_z span {
+    display: block;
+    height: 14px;
+    line-height: 14px;
+    margin-top: -90px;
+}
+#topbar .game_pop .gr_z i{
+    display: inline-block;
+    color: #fff;
+    background-color: #ff9c09;
+    height: 14px;
+    line-height: 14px;
+    padding:0 4px;
+    border-radius: 7px;
+    margin-left: 4px;
+}
+#topbar .game_pop a{
+    font-size: 12px;
+}
+/*游戏模块结束*/
+/*左侧模块结束*/
+
+
+
+/*/*右侧模块*右侧公共样式*/
+#topbar .fr .pop_wrap {
+    margin: 0
+}
+#topbar .fr .nav {
+    line-height: 44px;
+    padding: 0 22px 0 14px;
+    float: left;
+    background-image: none;
+}
+#topbar .fr .nav em {
+    right: 9px
+}
+#topbar .fr .nav q {
+    position: absolute;
+    top: 0;
+    right: -1px
+}
+#topbar .fr .pop_on .nav i {
+    display: none
+}
+#topbar .fr .pop_box {
+    padding-top: 9px;
+    top: 44px;
+    left: auto;
+    right: 0
+}
+
+
+
+/*登陆注册模块开始*/
+#userbar {
+    float: left;
+    margin-right: 60px;
+    color: #666
+}
+#topbar .btn_login {
+    float: left;
+    width: 66px;
+    height: 47px;
+    background: #404040;
+    border-bottom: 3px solid #7cc815;
+    text-align: center;
+    font: 16px/47px "Microsoft Yahei";
+    color: #fff;
+    position: relative
+}
+#topbar .btn_login em {
+    position: absolute;
+    border-color: #9f9f9f transparent transparent #9f9f9f;
+    border-style: solid dashed dashed solid;
+    border-width: 7px 5px 0 0;
+    right: -5px;
+    top: 43px;
+    overflow: hidden;
+    height: 0
+}
+#topbar .btn_regist {
+    float: left;
+    font: 14px/46px "Microsoft Yahei";
+    color: #333;
+    margin: 0 72px 0 12px
+}
+#topbar #userbar .pop_wrap {
+    margin-right: 10px
+}
+#userbar .u_nav {
+    padding: 0;
+    height: 44px;
+    line-height: 44px;
+    float: left;
+    cursor: pointer;
+
+}
+#userbar .u_nav a {
+    float: left
+}
+#topbar #userbar .pop_box {
+    left: 0;
+    border:1px solid #ccc;
+    padding-left: 16px;
+}
+/*登陆注册模块结束*/
+
+
+
+/*通知模块开始*/
+
+#all_msg {
+    height: 18px;
+    line-height: 18px;
+    background-color: #ff0000;
+    border-radius: 5px 5px 0px 5px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+    padding: 0 3px;
+}
+#all_msg_box {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 60px;
+    margin-left: -105px;
+    top: -15px;
+    text-align: center;
+}
+#topbar .notice_pop li {
+    float: left;
+    width: 100%
+}
+#topbar .notice_pop li a {
+    padding: 0 8px;
+    display: block;
+    position: relative;
+    _zoom: 1;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    transition: all .2s ease-in
+}
+#topbar .notice_pop li span  {
+    border-bottom: 1px dashed #dcdddd;
+    display: block;
+    cursor: pointer;
+    height: 31px;
+    color: #333;
+    font: 13px/31px "Tahoma"
+}
+#topbar .notice_pop a:hover {
+    text-decoration: none;
+    background: #f2f2f2;
+    margin-top: -1px;
+    padding-top: 1px
+}
+#topbar .notice_pop a:hover span {
+    border-bottom: none;
+    padding-bottom: 1px
+}
+#topbar .notice_pop {
+    width: 118px;
+    border:1px solid #ccc;
+}
+#topbar .notice_pop i {
+    float: left;
+    width: 75px;
+    padding-left: 5px
+}
+#topbar .notice_pop em {
+    color: #ff585d;
+    font-weight: bold;
+    float: left;
+    font-family: "Arial"
+}
+#topbar .notice_pop li span {
+    font-family: "宋体";
+    line-height: 32px
+}
+
+
+/*通知模块结束*/
+
+
+/*书架模块开始*/
+#topbar .book_pop {
+    width: 270px;
+    padding: 0;
+    border:1px solid #ccc;
+}
+#topbar .book_pop .tab_con {
+    height: 430px;
+    clear: both;
+    width: 270px;
+    overflow: hidden
+}
+#topbar .book_pop .tab a {
+    float: left;
+    width: 134px;
+    height: 32px;
+    border-bottom: 1px solid #d1d5de;
+    background: #eff2f9;
+    text-align: center
+}
+#topbar .book_pop .tab a i {
+    font: 14px/32px "Microsoft Yahei";
+    display: inline-block;
+    cursor: pointer
+}
+#topbar .book_pop .tab .curr {
+    background: #fff;
+    text-decoration: none;
+    border-bottom: none
+}
+#topbar .book_pop .tab .curr i {
+    border-bottom: 3px solid #fa5603;
+    color: #333;
+    height: 31px
+}
+#topbar .book_pop .tab .curr .bor_green {
+    border-color: #9cd12c
+}
+#topbar .book_pop .tab q {
+    float: left;
+    height: 33px;
+    border-left: 1px solid #d1d5de;
+    width: 0;
+    overflow: hidden
+}
+.loading {
+    line-height: 50px;
+    height: 50px;
+    clear: both;
+    text-align: center;
+    margin: 50px 0;
+    font: 14px "Microsoft Yahei";
+    color: #666
+}
+.loading span {
+    display: inline-block !important;
+    width: 50px;
+    height: 50px;
+    background: url(../images/loading.gif) no-repeat;
+    vertical-align: middle;
+    margin-right: 15px
+}
+#topbar .book_pop .loading {
+    margin: 150px 0
+}
+/*书架模块结束*/
+
+
+
+/*充值模块和作者福利模块公共样式*/
+#topbar .pop_box_con {
+    border:1px solid #ccc;
+    padding-top: 1px;
+}
+#topbar .right_pop_box .pop_box_con  li {
+    height: 30px;
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+
+/*论坛模块*/
+
+
+/*作者福利模块开始*/
+
+#pull_welfare .usercenter_pop li {
+    width: 88px;
+}
+
+/*作者福利模块结束*/
+
+
+/*投稿签约模块开始*/
+#pull_welfare_tougao .pop_box_con {
+    border-color: #6dad15;
+    width: 400px;
+    /*padding: 10px;*/
+}
+#topbar .fr .nav{
+    line-height: 44px;
+    padding: 0 22px 0 14px ;
+    float: left;
+    background-image: none;
+}
+#topbar .fr .pop_on{
+    color: #fff !important;
+    background-color: #5c5c5c
+}
+#pull_welfare_tougao .pop_box_con strong {
+    font-size: 14px;
+    font-weight: bold;
+}
+.pop_pop>.bgleft img{
+    width: 161px;
+    height: 137px;
+}
+#pull_welfare_tougao>.pop_box_con, strong{
+    color: #3a001b;
+    font-size: 14px;
+}
+#pull_welfare_tougao .pop_box_con i {
+    color: #000;
+    font-size: 12px;
+}
+/*华改*/
+/*投稿签约模块结束*/
+
+
+/*上传模块模块*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*导航下拉效果，删除会影响右侧的效果*/
+#topbar .pop_on .pop_box {
+    display: block !important;
+    -webkit-animation: pop_fadein .5s alternate ease-in-out;
+    -moz-animation: pop_fadein .5s alternate linear;
+    -ms-animation: pop_fadein .5s alternate linear;
+    animation: pop_fadein .5s alternate ease-in-out;
+}
+
+
+/*下拉*/
+#topbar .pop_box_con .pop_box {
+    border: 1px solid #5c5c5c;
+    -webkit-box-shadow: 2px 3px #818181;
+    box-shadow: 2px 3px #818181;
+    padding: 8px 0;
+    background: #fff
+}
+
+body {
+    background-color: black;
+}
+
+
+/*游戏模块样式*/
+
+/*右侧模块*/
+
+
+
+
+
+
+
+/*用户信息*/
+
+
+
+

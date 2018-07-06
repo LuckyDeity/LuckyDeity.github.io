@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reversal.css">
+    <!-- <script src="js/reversal.js"></script> -->
+    <script src="01.jq/jquery-1.12.4.min.js"></script>
+    <script>
+        // 入口函数
+        $(function() {
+            // 设置菜单默认的颜色
+            $('#all').addClass('btncolor').siblings('li').removeClass('btncolor');
+            // tab栏切换颜色(排它)
+            $('ul li').click(function() {
+                $(this).addClass('btncolor').siblings('li').removeClass('btncolor');
+            })
+
+            // 设置向右移动的距离
+            function moveRight(target) {
+                $('#ul').animate({
+                    left: -target,
+                }, 1000)
+            }
+            // 设置向左移动的距离
+            function moveLeft(target) {
+                $('#ul').animate({
+                    left: -target
+                }, 1000)
+            }
+            // 封装排它
+            function exclusive() {
+                if (index == 1) {
+                    $('#person').addClass('btncolor').siblings('li').removeClass('btncolor');
+                    $('.left,.right').show();
+                } else if (index == 2) {
+                    $('#maid').addClass('btncolor').siblings('li').removeClass('btncolor');
+                    $('.right').hide();
+                    $('.left').show();
+                } else {
+                    $('#all').addClass('btncolor').siblings('li').removeClass('btncolor');
+                    $('.left').hide();
+                }
+            }
+            // 点击右侧按钮移动图片
+            var index = 0;
+            $('.right').click(function() {
+                index++;
+                $('.left,.right').show();
+                if (index > 2) {
+                    index = 0;
+                }
+                moveRight(index * 1500);
+                exclusive();
+            })
+
+            // 点击左侧按钮移动图片
+            $('.left').click(function() {
+                index--;
+                $('.left,.right').show();
+                if (index < 0) {
+                    index = 2;
+                }
+                moveLeft(index * 1500);
+                exclusive();
+            })
+
+            // 点击全部跳转到第一张
+            $('#all').click(function() {
+                index = 0;
+                moveRight(index * 1500);
+                exclusive();
+            })
+
+            // 点击少年切换切换
+            $('#person').click(function() {
+                index = 1
+                moveRight(index * 1500);
+                exclusive();
+            })
+
+            //点击少女切换切换
+            $('#maid').click(function() {
+                index = 2;
+                moveRight(index * 1500);
+                exclusive();
+            })
+
+            // 鼠标移入高亮
+            $('.content_slideshow ul li').mouseenter(function() {
+                // 自己的透明度为1
+                $(this).animate({
+                        opacity: 1
+                    }, 100)
+                    // 找其他的li标签
+                $(this).siblings().animate({
+                    opacity: .3
+                }, 200)
+            })
+
+            // ul移出之后 把他内部的所有li标签 的透明度 还原为1
+            $('.content_slideshow').mouseleave(function() {
+                // ul的子节点 li 都还原透明度
+                $(this).children().children().animate({
+                    opacity: 1
+                }, 200)
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="content w">
+        <div class="content_top">
+            <i class="pen icon"></i>
+            <h2>订阅漫画</h2>
+            <ul>
+                <li id="all">
+                    <a href="#">全部</a>
+                </li>
+                <li id="person">
+                    <a href="#">少年</a>
+                </li>
+                <li id="maid">
+                    <a href="#">少女</a>
+                </li>
+            </ul>
+            <div class="content_right">
+                <a href="#" class="gengduo">更多</a>
+                <a href="#" class="gengduo_inco"></a>
+            </div>
+        </div>
+        <div class="content_comic">
+            <div class="btn" id="btn">
+                <span class="left">&lt;</span>
+                <span class="right">&gt;</span>
+            </div>
+            <div class='content_slideshow '>
+                <ul id="ul">
+                    <li id='one' class="one block">
+                        <a href="#" class="one">
+                            <img src="pictures/123.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 戈鹤大戈</a>
+                        <p>战场修罗在这里诞生</p>
+                    </li>
+                    <li class="one block">
+                        <a href="#">
+                            <img src="pictures/456.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">魔力欢仔</a>
+                        <p>学霸屌丝男化学反应</p>
+                    </li>
+                    <li class="one block">
+                        <a href="#">
+                            <img src="pictures/datui.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 真月的森林</a>
+                        <p>不乖？调教一下就好</p>
+                    </li>
+                    <li class="one block">
+                        <a href="#">
+                            <img src="pictures/guisen.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">鬼僧谈</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one block">
+                        <a href="#">
+                            <img src="pictures/jueding.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 绝顶</a>
+                        <p>少女/魔幻</p>
+                    </li>
+                    <li class="one block">
+                        <a href="#">
+                            <img src="pictures/meinu.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">绝顶</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one1 block">
+                        <a href="#">
+                            <img src="pictures/xianyuan.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">仙渊</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one1 block">
+                        <a href="#">
+                            <img src="pictures/mingxizhi.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">明汐志</a>
+                        <p>少年/搞笑/生活</p>
+                    </li>
+                    <li class="one1 block">
+                        <a href="#">
+                            <img src="pictures/chounu.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 丑奴儿</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one1 block">
+                        <a href="#">
+                            <img src="pictures/yanwang.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">阎王</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one1 block">
+                        <a href="#">
+                            <img src="pictures/digong.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 地宫战绩</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one1 block">
+                        <a href="#">
+                            <img src="pictures/nver.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 女儿国传奇</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one2 block">
+                        <a href="#">
+                            <img src="pictures/paozi.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">末日袍子</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one2 block">
+                        <a href="#">
+                            <img src="pictures/laishi.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">来世渡鸦</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one2 block">
+                        <a href="#">
+                            <img src="pictures/yaoguo.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">
+                            <i></i> 妖闻录</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one2 block">
+                        <a href="#">
+                            <img src="pictures/keling.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">科林的学徒</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one2 block">
+                        <a href="#">
+                            <img src="pictures/xialong.jpg" alt="">
+                        </a>
+                        <a href="#" class="two">夏龙少年翔</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                    <li class="one2 block">
+                        <a href="#">
+                            <img src="pictures/qiunue.png" alt="">
+                        </a>
+                        <a href="#" class="two">求虐</a>
+                        <p>少女/魔幻/恋爱/动作</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    window.onresize = function() {
+        banxin();
+    };
+    banxin();
+
+
+
+
+
+
+    //封装----------------------------------------------------------------
+
+
+    /**
+     * 获取页面可视区的宽和高
+     * window.innerWidth  谷歌 火狐
+     * document.documentElement.clientWidth  ie8
+     * returns {{clientWidth: (Number|number), clientHeight: (Number|number)}}
+     */
+    function getClient() {
+        return {
+            clientWidth: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0,
+            clientHeight: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight ||
+                0
+        }
+    }
+
+
+    //响应式布局-版心
+    function banxin() {
+        var classW = document.getElementsByClassName("w");
+        for (var i = 0; i < classW.length; i++) {
+            var banxin = getClient().clientWidth;
+            classW[i].style.margin = "0 auto";
+            if (banxin > 1500) {
+                classW[i].style.width = 1500 + "px";
+            } else {
+                classW[i].style.width = 1200 + "px";
+            }
+        }
+    }
+</script>

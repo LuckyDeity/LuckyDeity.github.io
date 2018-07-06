@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        /*版本标题*/
+        .cartoon-title a {
+            font: bold 22px "Microsoft Yahei";
+        }
+
+        .cartoon-title a:hover {
+            color: #d94c03;
+        }
+
+        .cartoon-title i {
+            font: normal 12px "Microsoft Yahei";
+            color: #bfbcb7;
+            vertical-align: bottom;
+        }
+
+        /*滚动框里面可以滚动,就是子绝父相*/
+        .cartoon-contents {
+            width: 100%;
+            margin: 18px 0 0 20px;
+            height: 190px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cartoon-icon {
+            height: 190px;
+            width: 2380px;
+            position: absolute;
+        }
+
+        .cartoon-icon li {
+            float: left;
+            text-align: center;
+            margin: 0px 10px;
+        }
+
+        .cartoon-icon li a img {
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;
+            border: 10px solid #e5e4e3;
+            filter: grayscale(1);
+        }
+
+        .cartoon-icon li a img:hover {
+            filter: none;
+        }
+
+        .cartoon-icon li p:nth-child(2) {
+            font-size: 14px;
+        }
+
+        .cartoon-icon li p:nth-child(3) {
+            color: #bfbcb7;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="cartoon-center w">
+    <p class="cartoon-title">
+        <a href="#">未闻花名
+            <i>CARTOON CENTER</i>
+        </a>
+    </p>
+    <!--图标内容-->
+    <div class="cartoon-contents">
+        <ul class="cartoon-icon">
+            <li>
+                <a href="#">
+                    <img src="images/vpic_plus.jpg"/>
+                </a>
+
+                <p>敬请期待</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM1.png"/>
+                </a>
+
+                <p>本间芽衣子</p>
+
+                <p>善良可爱,又名面码</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM2.png"/>
+                </a>
+
+                <p>宿海仁太</p>
+
+                <p>超和平的创立者</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM3.png"/>
+                </a>
+
+                <p>安城鸣子</p>
+
+                <p>很时髦的女高中生</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM4.png"/>
+                </a>
+
+                <p>松雪集</p>
+
+                <p>帅，学习也很好</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM5.png"/>
+                </a>
+
+                <p>鹤见知利子</p>
+
+                <p>喜欢看书喜欢松雪集</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM6.png"/>
+                </a>
+
+                <p>久川铁道</p>
+
+                <p>憨厚强壮的伙伴</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM7.png"/>
+                </a>
+
+                <p>宿海笃</p>
+
+                <p>仁太的父亲</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM8.png"/>
+                </a>
+
+                <p>宿海塔子</p>
+
+                <p>仁太的母亲</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM9.png"/>
+                </a>
+
+                <p>本间伊伦</p>
+
+                <p> 芽衣子的母亲</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM10.png"/>
+                </a>
+
+                <p>本间聪志</p>
+
+                <p>芽衣子的弟弟</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM11.png"/>
+                </a>
+
+                <p>本间学</p>
+
+                <p>芽衣子的父亲</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM12.png"/>
+                </a>
+
+                <p>春菜</p>
+
+                <p>鸣子高中的朋友</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/WWHM13.png"/>
+                </a>
+
+                <p>亚纪</p>
+
+                <p>鸣子高中的朋友</p>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<script>
+    //获取div 和 ul
+    var cartoonContents = document.querySelector('.cartoon-contents');
+    var cartoonIcon = document.querySelector('.cartoon-icon');
+
+    //用外Contents的div包icon的div
+    cartoonContents.onmousemove = function (e) {
+        e = e || window.event;
+        //当我鼠标移入,获取了鼠标在盒子的x坐标位置
+        var x = e.pageX - cartoonContents.offsetLeft;
+        //等比例移动
+        cartoonIcon.style.left = -((cartoonIcon.offsetWidth-cartoonContents.offsetWidth) / cartoonContents.offsetWidth * x)+ "px";
+    }
+</script>
+
+</body>
+</html>

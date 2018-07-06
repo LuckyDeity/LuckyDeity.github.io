@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>漫画-有妖气加载页面</title>
+    <link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /*进度条设置*/
+        .flex-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            width: 1900px;
+            margin-left: -950px;
+        }
+
+        .container {
+            display: inline-block;
+            width: 50%;
+            height: 22px;
+            padding-right: 10px;
+            border: 1px solid #999;
+            border-radius: 10px;
+        }
+        .h-100P {
+            height: 100%;
+        }
+        h3{
+            font-size:25px;
+            font-weight: 900;
+            color: #9cd12b;
+        }
+        .bar {
+            display: inline-block;
+            background:#9cd12b;
+            color: white;
+            font-weight: bold;
+            padding: 0 5px;
+            text-align: right;
+            border-radius: 10px;
+            border-right: 1px solid #999;
+        }
+
+    </style>
+    <script src="入场动画/lib/jquery-1.12.4.js"></script>
+
+</head>
+<script>
+    //进度条设置
+    $(document).ready(function () {
+        var percentage = 0;
+        var interval = setInterval(function () {
+            if (percentage < 40000) {
+                percentage += 5;
+                var widthTemp = (percentage / 400).toFixed(1) + '%';
+                $('#progressBar').css('width', widthTemp);
+                $('#progressBar').text(widthTemp);
+            } else {
+                clearInterval(interval);
+                $('h3').text('欢迎来到有妖气.....');
+                setTimeout(function () {
+                    location = 'other.html';
+                },2000);
+            }
+        }, 1);
+
+        var flag = 0;
+        var width = $(window).width();
+        if(width > 1730){
+            $("video").css({
+                width: width
+            })
+            $(".flex-center").css({
+                left: 50 + "%",
+                marginLeft: -950
+            })
+            flag = 1;
+        }else if(width < 1366){
+            $("video").css({
+                width: width
+            })
+            $(".flex-center").css({
+                left: -250,
+                marginLeft: 0
+            })
+            flag = 2;
+        }else {
+            $("video").css({
+                width: width
+            })
+            flag = 3;
+        }
+
+        if(flag == 1){
+            $(window).resize(function (){
+                var width = $(this).width();
+                if(width >= 1750){
+                    $("video").width(width);
+                }
+            })
+            flag = 0;
+        }else if(flag == 3){
+            $(window).resize(function (){
+                var width = $(this).width();
+                if(width >= 1550){
+                    $("video").width(width);
+                }
+            })
+            flag = 0;
+        }else {
+            $(window).resize(function (){
+                var width = $(this).width();
+                if(width <= 1366){
+                    $("video").width(width);
+                }
+            })
+            flag = 0;
+        }
+
+    })
+
+
+</script>
+<body >
+<video src="images/混流180424234709~1.mp4" autoplay loop width="100%" ></video>
+<!--进度条设置-->
+<div class="flex-center">
+    <h3>页面加载中，请稍等.....</h3>
+            <span class="container">
+                <span id="progressBar" class="h-100P bar"></span>
+            </span>
+</div>
+
+
+</body>
+</html>

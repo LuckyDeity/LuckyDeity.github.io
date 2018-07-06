@@ -1,0 +1,355 @@
+/*初始化代码*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+input {
+    border: 0 auto;
+    outline: 0 auto;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    ;
+    display: block;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*版心*/
+
+/* .w {
+    width: 1366px;
+    margin: 0 auto;
+} */
+
+/* 背景图片 */
+
+.background img {
+    width: 1366px;
+}
+.sunshine {
+    /* transform: txt_right; */
+    position: absolute;
+    top: -370px;
+    right: -548px;
+}
+.sunshine img {
+    width: 60%;
+}
+.seagull {
+    position: absolute;
+    top: 90px;
+    left: 235px;
+}
+.seagull1 {
+    position: absolute;
+    top: 200px;
+    left: 430px;
+}
+/*装整个登入框的盒子*/
+
+.enter {
+    position: absolute;
+    width: 392px;
+    height: 455px;
+    top: 50%;
+    margin-top: -240px;
+    right: 13%;
+    opacity: 0.9;
+}
+
+/*装上面的盒子*/
+
+.enterBoxOne {
+    width: 392px;
+    height: 352px;
+    background-color: #fdfcfd;
+    border-radius: 4px;
+}
+
+/*logo*/
+
+.enter_logo {
+    width: 392px;
+    height: 45px;
+    display: block;
+    margin-bottom: 5px;
+    background: url("../images/logo.png") no-repeat right;
+}
+
+/*邮箱,手机,用户名*/
+
+.enter .tit {
+    height: 35px;
+    width: 359px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.enter .tit a {
+    float: left;
+    width: 92px;
+    height: 33px;
+    background: #e3e3e3;
+    border: 1px solid #ccc;
+    margin-left: -1px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 16px;
+    color: #555;
+}
+
+.enter .tit a.cur {
+    background: #69c4f6;
+    border-color: #faf9f9;
+    color: #fff;
+}
+.register_info {
+    margin: 0 auto;
+    width: 359px;
+    font-size: 12px;
+    text-align: left;
+    line-height: 26px;
+    height: 26px;
+    color: #00cb3e;
+    visibility: hidden;
+}
+
+.inputUsreName {
+    width: 340px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+
+.usName {
+    width: 290px;
+    padding: 0 40px 0 10px;
+    font-size: 18px;
+    color: #7a737d;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    background-color: transparent;
+    outline: none;
+    ;
+}
+
+.code {
+    width: 145px;
+    padding: 0 40px 0 10px;
+    font-size: 18px;
+    color: #7a737d;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    background-color: transparent;
+    outline: none;
+}
+
+.get_verification_code {
+    float: right;
+    width: 130px;
+    height: 42px;
+    border-bottom: 4px solid #007eb8;
+    background-color: #00a1e9;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.spriteSheetRen {
+    width: 24px;
+    height: 24px;
+    background: url("../images/icon2.png") no-repeat;
+    background-position: 0 0;
+    float: right;
+    margin-top: -36px;
+    margin-right: 14px;
+}
+
+/*密码框*/
+
+.inputPassword {
+    width: 340px;
+    height: 42px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    margin: 0 auto;
+}
+
+.password {
+    width: 290px;
+    height: 40px;
+    color: #c1bec6;
+    font-size: 18px;
+    padding-left: 10px;
+    float: left;
+    margin: 0 auto;
+}
+
+.spriteSheetLock {
+    width: 24px;
+    height: 24px;
+    background: url("../images/icon2.png") 0px -85px;
+    float: right;
+    /*border: 1px solid;*/
+    margin-top: 8px;
+    margin-right: 14px;
+}
+
+/*记住登录*/
+
+.remember_login {
+    width: 342px;
+    height: 32px;
+    /*background-color: pink;*/
+    position: relative;
+    margin: 0 auto;
+}
+
+.remember_login i {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+}
+
+.remember_login p {
+    line-height: 32px;
+    font-size: 13px;
+    color: #6fc2de;
+}
+
+/*登录按钮*/
+
+.login {
+    display: block;
+    width: 342px;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 4px solid #3d9b58;
+    border-radius: 2px;
+    background-color: #55ce7a;
+    margin: 15px 0 0 25px;
+}
+
+/*忘记密码*/
+
+.login_link_list {
+    width: 142px;
+    position: relative;
+    font-size: 13px;
+    color: #6fc2de;
+    margin: 15px auto;
+}
+
+.login_link_list a {
+    color: #6fc2de;
+}
+
+.txt_right {
+    display: inline-block;
+    color: #000;
+    /* float: right; */
+}
+
+.txt_right a {
+    color: #6fc2de;
+}
+.txt_right a:hover {
+    text-decoration: underline;
+}
+
+/*下面的精灵图*/
+
+/*包裹的盒子*/
+
+.login_wrapper {
+    width: 392px;
+    height: 75px;
+    padding-bottom: 10px;
+    position: absolute;
+    border-top: 1px solid #e0e0e3;
+    border-radius: 0 0 4px 4px;
+    background: #fdfcfd;
+}
+
+/*一键登录*/
+
+.One_click_login {
+    text-align: center;
+    font-size: 14px;
+    color: #6fc2de;
+    display: block;
+    padding-top: 10px;
+    position: relative;
+}
+
+/*精灵图*/
+
+.login_list {
+    position: relative;
+    margin-top: 14px;
+    height: 40px;
+    width: 392px;
+}
+
+.login_list li {
+    width: 128px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+.login_list li:nth-child(3) {
+    border-right: none;
+}
+/* 点击记住密码 */
+.checkbox {
+    background: url("../images/check.png") no-repeat;
+    background-position: 0px -25px;
+}
+
+.icn {
+    background-position: 0px 0px;
+}
+/* 点击切换邮箱&手机注册 */
+.hied_code {
+    display: none;
+}

@@ -1,0 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+body {
+    font: 12px/100% "Microsoft Yahei";
+}
+
+a {
+    text-decoration: none;
+    color: #949494;
+}
+
+.w1000 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top-nav {
+    background: rgba(244, 245, 246, .95);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+}
+
+.top-nav:hover {
+    background: rgba(244, 245, 246, 1);
+}
+
+.top-nav-inner {
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top-nav-left {
+    position: absolute;
+    left: 0;
+    top: 16px;
+}
+
+.top-nav-left img {
+    width: 185px;
+    height: 65px;
+}
+
+.top-nav-center {
+    position: absolute;
+    left: 325px;
+    top: 55px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+
+.top-nav-center ul li {
+    float: left;
+    padding: 0 11px 27px 11px;
+}
+
+.top-nav-center ul li:hover {
+    border-bottom: 4px solid #87CA43;
+}
+
+.top-nav-center ul li a {
+    text-decoration: none;
+    color: #323534;
+}
+
+.top-nav-center ul li a:hover {
+    color: #87CA43;
+}
+
+.top-nav-right {
+    height: 100%;
+    width: 103px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background-color: #49AF31;
+}
+
+.top-nav-right a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: 100px;
+}
+
+.top-nav-right a:hover {
+    text-decoration: underline;
+}
+
+.top-nav-right span {
+    color: #fff;
+}
+
+.top-nav-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 51.5px;
+    border-color: #49AF31 transparent transparent transparent;
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+
+.banner {
+    /*内边距设置100,导航栏滚动就不用设置其他东西*/
+    padding-top: 100px;
+    /*width: 1920px;*/
+    width: 100%;
+    height: 711px;
+    position: relative;
+    /*top: -100px;*/
+}
+
+.banner-inner {
+    position: relative;
+}
+
+.banner .banner-imgs {
+    width: 1920px;
+    height: 711px;
+    margin: 0 auto;
+
+}
+
+.banner .banner-imgs ul{
+    width: 100%;
+}
+
+.banner .banner-imgs ul li {
+    position: absolute;
+    display: none;
+    left: 50%;
+    margin-left: -960px;
+}
+
+/*banner右下角的小圆点*/
+.banner .banner-round ol {
+    position: absolute;
+    right: 50%;
+    margin-right: -700px;
+    bottom: 20px;
+    width: 120px;
+    height: 20px;
+}
+
+.banner .banner-round ol li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid white;
+    float: left;
+    margin-right: 4px;
+    background-color: #fff;
+}
+
+.banner .banner-round ol li.active {
+    background-color: #49AF31;
+}
+
+/*左右按钮 父级定位是body*/
+
+.banner .banner-btn {
+    position: relative;
+}
+.banner .banner-btn a {
+    text-decoration: none;
+    color: #454544;
+    padding: 20px 5px;
+    text-align: center;
+    font: bold 50px "Mircrosoft Yahei";
+    position: absolute;
+    background-color: #49AF31;
+    opacity: 0.5;
+    top: 356px;
+}
+
+.banner-btn #rightBtn {
+    right: 0;
+}
+
+.banner .banner-btn a:hover {
+    opacity: 1;
+}
+
+/*中心*/
+/* 为你推荐 */
+/*大盒子*/
+.recommended {
+    height: 623px;
+    background-color: #f1f1f1;
+}
+/*中心定位子盒子*/
+.fix {
+    width: 1920px;
+    height: 623px;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+    overflow: hidden;
+}
+/*中心定位子盒子子盒子*/
+.recommended .recommended1 {
+    height: 623px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    z-index: 2;
+}
+
+.recommended1 .dire1 {
+    position: absolute;
+    width: 34px;
+    height: 19px;
+    background: url("../images/btn_prev.png");
+    right: 40px;
+    top: 35px;
+}
+
+.recommended1 .dire2 {
+    position: absolute;
+    width: 34px;
+    height: 19px;
+    background: url("../images/btn_prev.png");
+    background-position: -38px 0px;
+    right: 0px;
+    top: 35px;
+}
+
+.recommended1 .dire1:hover {
+    background-position: 0px -22px;
+}
+
+.recommended1 .dire2:hover {
+    background-position: -38px -22px;
+}
+
+.recommended1 h2 {
+    font-size: 27px;
+    color: #252525;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    padding-left: 26px;
+}
+
+.recommended1 h2 span {
+    position: absolute;
+    width: 6px;
+    height: 30px;
+    left: 0;
+    top: 12px;
+    background: #fca301;
+
+}
+
+.recommended1 .recoList {
+    margin-top: 15px;
+    height: 623px;
+}
+
+.recommended1 .recoList li {
+    float: left;
+    width: 238px;
+    height: 492px;
+    position: relative;
+    margin-right: 16px;
+
+}
+
+.recommended1 .recoList .bg,
+.recommended1 .recoList .bg2 {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+.recommended1 .recoList .boxCell {
+    width: 238px;
+    height: 124px;
+    margin: 0 auto;
+    position: absolute;
+    top: 40%;
+}
+
+.recommended1 .recoList a {
+    display: block;
+    font-size: 12px;
+    width: 106px;
+    height: 32px;
+    background: rgba(106, 174, 33, .6);
+    color: #fff;
+    margin: 10px auto;
+    line-height: 32px;
+    text-align: center;
+}
+
+.recommended1 .recoList span {
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    padding: 0 20px;
+    line-height: 26px;
+    display: inline-block;
+
+}
+
+.recommended1 .recoList .shang,
+.recommended1 .recoList .xia {
+    width: 492px;
+    height: 238px;
+    position: relative;
+    float: left;
+}
+
+.recommended1 .recoList .shang {
+    margin-bottom: 16px;
+}
+
+.recommended1 .recoList .boxCell2 {
+    width: 496px;
+    height: 76px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    top: 35%;
+}
+
+.recommended1 .recoList .bg {
+    display: none;
+}
+
+.gameList {
+    position: relative;
+    height: 494px;
+    background-color: #ffffff;
+}
+
+.gameType {
+    height: 494px;
+}
+
+.gameType .tab {
+    overflow: hidden;
+}
+
+.gameType .tab a {
+    display: block;
+    width: 238px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #6aae21;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 40px;
+}
+
+.gameType .gameBox {
+    height: 404px;
+    border-top: 2px solid #d5dadf;
+    /* border: 1px 0; */
+}
+
+.gameType .gameBox .title {
+    /* width: 224px;
+    height: 40px; */
+    padding-left: 24px;
+    color: #1d5bc2;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 8px;
+    line-height: 40px;
+    background-color: #e9ebee;
+
+}
+
+.gameType .gameBox .gameBox1 {
+    width: 248px;
+    height: 404px;
+    float: left;
+    border-left: 1px solid #d5dadf;
+    border-right: 1px solid #d5dadf;
+}
+
+.gameType .list {
+    padding-top: 20px;
+    padding-left: 36px;
+}
+
+.gameType .list a {
+    color: #333;
+    line-height: 40px;
+}
+
+.gameType .list a:hover {
+    color: #6aae21;
+}
+
+.gameType .gameBox2 {
+    float: left;
+    width: 499px;
+    height: 404px;
+    border-right: 1px solid #d5dadf;
+
+}
+
+.gameType .gameBox2 .list .left {
+    float: left;
+    width: 145px;
+    border-right: 1px solid #d5dadf;
+}
+
+.gameType .gameBox2 .list .right {
+    float: left;
+    width: 145px;
+    padding-left: 35px;
+}
+
+.gameType .gameBox3 {
+    float: left;
+    width: 249px;
+    height: 404px;
+    border-right: 1px solid #d5dadf;
+}
+
+/* 服务大厅 */
+
+.service {
+    padding-top: 30px;
+    width: 100%;
+    height: 325px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    /*border-top: ;*/
+
+}
+
+/* .service .ser {
+    background-color: pink;
+} */
+
+.service h2 {
+    font-size: 28px;
+    color: #252525;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    padding-left: 26px;
+
+}
+
+.service h2 span {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 6px;
+    height: 30px;
+    background-color: #fca301;
+}
+
+.service ul {
+    overflow: hidden;
+}
+
+.service li {
+    float: left;
+    width: 238px;
+    height: 104px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-top: 17px;
+    background-color: #ceced0;
+    text-align: center;
+}
+
+.service li:hover {
+    background-color: #6aae21;
+}
+
+.service li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #868686;
+    line-height: 104px;
+}
+
+.service li:hover a {
+    color: white;
+}
+
+.service li:last-child {
+    margin-right: 0;
+}
+
+.service .ser-call {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #968888;
+    margin-bottom: 68px;
+}
+
+.service .ser-call span:nth-child(2) {
+    margin: 0 48px;
+}
+
+.service .ser-call a {
+    font-size: 16px;
+    color: #333;
+}
+
+.service .ser-call a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    height: 220px;
+    background-color: #2f3133;
+
+}
+
+.footer .footer1 {
+    position: relative;
+    height: 200px;
+
+}
+
+.footer .footer1 .f-logo {
+    width: 163px;
+    height: 52px;
+    position: absolute;
+    bottom: 85px;
+    left: 130px;
+}
+
+.footer .footer1 .ad a {
+    position: absolute;
+    display: block;
+    width: 42px;
+    height: 42px;
+    left: 302px;
+    top: 75px;
+}
+
+.footer .footer1 .ad a img {
+    width: 42px;
+    height: 42px;
+}
+
+.footer .footer1 .f-txt {
+    position: absolute;
+    top: 75px;
+    left: 352px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    color: #949494;
+}
+
+.footer .footer1 .f-txt .line{
+    padding:0 2px;
+}
+
+.footer .footer1 .bot {
+    width: 317px;
+    height: 47px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#line {
+    width: 1px;
+    height: 48px;
+    background-color: #949494;
+    position: absolute;
+    top: 83px;
+    left: 346px;
+}
+
+.footer .footer1 .go-top a {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 50%;
+    top: -18px;
+    transform: translateX(-55%);
+    overflow: hidden;
+    background: url("../images/go_top.png");
+}
+
+
+.bodyMask {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    bottom:0px;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 100;
+    display: none;
+}
+
+/*背景圆圈*/
+/*.bgBigRound {*/
+    /*width: 300px;*/
+    /*height: 300px;*/
+    /*position: absolute;*/
+    /*border-radius: 50%;*/
+    /*z-index: 1;*/
+    /*background-color: rgba(135,202,67,.5);*/
+    /*top:0;*/
+/*}*/
+
+/*.bgSmallRound {*/
+    /*width: 200px;*/
+    /*height: 100px;*/
+    /*position: absolute;*/
+    /*border-radius: 50%;*/
+    /*z-index: 0;*/
+    /*background-color: rgba(135,202,67,.5);*/
+    /*top:0;*/
+
+/*}*/

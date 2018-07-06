@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            font: 14px/100% "微软雅黑";
+        }
+
+        a {
+            text-decoration: none;
+            color: #949494;
+        }
+
+        .w1000 {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 为你推荐 */
+
+        .recommended {
+            height: 623px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        
+        .fix {
+
+        }
+        .recommended .recommended1 {
+            position: relative;
+            height: 558px;
+            margin-top: 25px;
+            /* background-color: pink; */
+        }
+
+        .recommended1 .dire1 {
+            position: absolute;
+            width: 34px;
+            height: 19px;
+            background: url("images/btn_prev.png");
+            right: 40px;
+            top: 35px;
+            z-index: 1;
+        }
+
+        .recommended1 .dire2 {
+            position: absolute;
+            width: 34px;
+            height: 19px;
+            background: url("images/btn_prev.png");
+            background-position: -38px 0px;
+            right: 0px;
+            top: 35px;
+            z-index: 1;
+        }
+
+        .recommended1 .dire1:hover {
+            background-position: 0px -22px;
+        }
+
+        .recommended1 .dire2:hover {
+            background-position: -38px -22px;
+        }
+
+
+        .recommended1 h2 {
+            font-size: 27px;
+            color: #252525;
+            font-weight: bold;
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            padding-left: 26px;
+        }
+
+        .recommended1 h2 span {
+            position: absolute;
+            width: 6px;
+            height: 30px;
+            left: 0;
+            top: 12px;
+            background: #fca301;
+
+        }
+
+        .recommended1 .recoList {
+            margin-top: 15px;
+        }
+
+        .recommended1 .recoList li {
+            float: left;
+            width: 238px;
+            height: 492px;
+            position: relative;
+            margin-right: 16px;
+
+        }
+
+        .recommended1 .recoList .bg,
+        .recommended1 .recoList .bg2 {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .6);
+        }
+
+        .recommended1 .recoList .boxCell {
+            width: 238px;
+            height: 124px;
+            margin: 0 auto;
+            position: absolute;
+            top: 40%;
+        }
+
+        .recommended1 .recoList a {
+            display: block;
+            font-size: 12px;
+            width: 106px;
+            height: 32px;
+            background: rgba(106, 174, 33, .6);
+            color: #fff;
+            margin: 10px auto;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .recommended1 .recoList span {
+            font-size: 14px;
+            color: #fff;
+            text-align: left;
+            padding: 0 20px;
+            line-height: 26px;
+            display: inline-block;
+
+        }
+
+        .recommended1 .recoList .shang,
+        .recommended1 .recoList .xia {
+            width: 492px;
+            height: 238px;
+            position: relative;
+            float: left;
+        }
+
+        .recommended1 .recoList .shang {
+            margin-bottom: 16px;
+        }
+
+        .recommended1 .recoList .boxCell2 {
+            width: 496px;
+            height: 76px;
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+            top: 35%;
+        }
+
+        
+    </style>
+    <script src="../lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var $bg = $(".bg");
+            $bg.parent().mouseenter(function () {
+                
+                $(this).children().eq(1).css({
+                    display: "block",
+                   
+                    background: "rgba(0, 0, 0, .5)"
+                });
+
+                $(this).children().eq(1).stop();
+                $(this).children().eq(1).css({
+                    height: $(this).css("height")
+                })
+
+            })
+
+            $bg.parent().mouseleave(function () {
+               
+                $(this).children().eq(1).css({
+                    display: "none",
+                });
+                $(this).children().eq(1).stop();
+                $(this).children().eq(1).animate({
+                    height: 0,
+
+                }, 1500)
+
+            })
+           
+        })
+    </script>
+</head>
+
+
+<body>
+    <!-- 为你推荐 -->
+    <div class="recommended">
+        <div class="fix w1000">
+                    <div class="recommended1 w1000">
+                        <a href="#" class="dire1">
+                        </a>
+                        <a href="#" class="dire2">
+                        </a>
+                        <h2>
+                            <span></span>为你推荐
+                    
+                        </h2>
+                        <div class="recoList">
+                            <ul>
+                                <li>
+                                    <img src="images/8e6f8b27u17177du174f1eu17938bu1774aef78c468d.jpg" alt="">
+                                    <div class="bg">
+                                        <div class="tabBox">
+                                            <div class="boxCell">
+                                                <a href="#">游戏官网</a>
+                                                <span>
+                                                    有妖气《镇魂无双》完美还原漫画风格兼具观赏性、操作性于一身的3D动作游戏！
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li class="mutou"></li> -->
+                                <li>
+                                    <img src="images/16f1dd27u1783d2u17406au17a327u1766c78228cf73.jpg" alt="">
+                                    <div class="bg">
+                                        <div class="tabBox">
+                                            <div class="boxCell">
+                                                <a href="#">游戏官网</a>
+                                                <span>
+                    
+                                                    《十万个冷笑话2》国漫全新手游，7月14日安卓端计费删档测试！
+                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li class="mutou"></li> -->
+                            </ul>
+                            <div class="shang">
+                                <img src="images/757211e9u170e4au1747c2u178b11u17e331c758f5eb.jpg" alt="">
+                                <div class="bg">
+                                    <div class="tabBox2">
+                                        <div class="boxCell2">
+                                            <a href="#">游戏官网</a>
+                                            <span>
+                                                有生之年！《魔法禁书目录》出手游了！100%还原动漫！
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="mutou1"></div> -->
+                            <div class="xia">
+                                <img src="images/b8336f1fu17bb62u1742d4u179581u1748c39be69ff5.jpg" alt="">
+                                <div class="bg">
+                                    <div class="tabBox2">
+                                        <div class="boxCell2">
+                                            <a href="#">游戏官网</a>
+                                            <span>
+                                                有妖气《镇魂街》完美还原漫画风格兼具观赏性、可玩性的角色扮演页游。
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            font: 14px/100% "微软雅黑";
+        }
+
+        a {
+            text-decoration: none;
+            color: #949494;
+        }
+
+        .w1000 {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 妖气游戏 */
+
+        .gameList {
+            height: 494px;
+            background-color: #ffffff;
+        }
+
+        .gameType {
+            height: 494px;
+        }
+
+        .gameType .tab {
+            overflow: hidden;
+        }
+
+        .gameType .tab a {
+            display: block;
+            width: 238px;
+            height: 50px;
+            color: #ffffff;
+            background-color: #6aae21;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 40px;
+        }
+
+        .gameType .gameBox {
+            height: 404px;
+            border-top: 2px solid #d5dadf;
+            /* border: 1px 0; */
+        }
+
+        .gameType .gameBox .title {
+            /* width: 224px;
+            height: 40px; */
+            padding-left: 24px;
+            color: #1d5bc2;
+            font-size: 18px;
+            text-align: left;
+            line-height: 40px;
+            background-color: #e9ebee;
+
+        }
+
+        .gameType .gameBox .gameBox1 {
+            width: 248px;
+            height: 404px;
+            float: left;
+            border-left: 1px solid #d5dadf;
+            border-right: 1px solid #d5dadf;
+        }
+
+        .gameType .list {
+            padding-top: 20px;
+            padding-left: 36px;
+        }
+
+        .gameType .list a {
+            color: #333;
+            line-height: 30px;
+        }
+
+        .gameType .gameBox2 {
+            float: left;
+            width: 499px;
+            height: 404px;
+            border-right: 1px solid #d5dadf;
+
+        }
+
+        .gameType .gameBox2 .list .left {
+            float: left;
+            width: 145px;
+            border-right: 1px solid #d5dadf;
+        }
+
+        .gameType .gameBox2 .list .right {
+            float: left;
+            width: 145px;
+            padding-left: 35px;
+        }
+
+        .gameType .gameBox3 {
+            float: left;
+            width: 249px;
+            height: 404px;
+            border-right: 1px solid #d5dadf;
+        }
+
+        /* 服务大厅 */
+
+        .service {
+            width: 100%;
+            height: 325px;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+           
+        }
+
+        /* .service .ser {
+            background-color: pink;
+        } */
+
+        .service h2 {
+            font-size: 28px;
+            color: #252525;
+            font-weight: bold;
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            padding-left: 26px;
+        }
+
+        .service h2 span {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 6px;
+            height: 30px;
+            background-color: #fca301;
+        }
+
+        .service ul {
+            overflow: hidden;
+        }
+
+        .service li {
+            float: left;
+            width: 238px;
+            height: 104px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            margin-top: 17px;
+            background-color: #ceced0;
+             text-align: center;
+        }
+
+        .service li a {
+            font-size: 20px;
+            color: #868686;
+            line-height: 104px;
+           
+        }
+        .service li:last-child {
+            margin-right: 0;
+        }
+
+        .service .ser-call {
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            color: #968888;
+            margin-bottom: 68px;
+        }
+
+        .service .ser-call span:nth-child(2) {
+            margin: 0 48px;
+        }
+
+        .service .ser-call a {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .service .ser-call a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            width: 100%;
+            height: 200px;
+            background-color: #2f3133;
+         
+           
+        }
+
+        .footer .footer1 {
+            position: relative;
+            height: 200px;
+          
+        }
+
+        .footer .footer1 .f-logo {
+            width: 163px;
+            height: 52px;   
+            position: absolute;
+            bottom: 85px;
+            left: 130px;
+        }
+
+        .footer .footer1 .ad a {
+            position: absolute;
+            display: block;
+            width: 42px;
+            height: 42px;
+            left: 302px;
+           top: 75px;
+        }
+
+        .footer .footer1 .ad a img {
+            width: 42px;
+            height: 42px;
+        }
+
+         .footer .footer1 .f-txt{
+             position: absolute;
+             top: 75px;
+             left: 352px;
+             text-align: center;
+             font-size: 16px;
+             line-height: 32px;
+             color: #949494;
+         }
+
+         .footer .footer1 .bot {
+             width: 317px;
+             height: 47px;
+             position: absolute;
+             left: 50%;
+             transform: translateX(-50%);
+         }
+
+         #line {
+             width: 1px;
+             height: 48px;
+             background-color: #949494;
+             position: absolute;
+              top: 83px;
+              left: 346px;
+         }
+
+         .footer .footer1 .go-top a {
+             width: 65px;
+             height: 65px;
+             position: absolute;
+              left: 50%;
+              top: -18px;
+             transform: translateX(-55%);
+             overflow: hidden;
+             background: url("images/go_top.png");
+         }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="gameList">
+        <!-- 妖气游戏 -->
+        <div class="gameType w1000">
+            <div class="tab">
+                <a href="#" id="">妖气游戏</a>
+            </div>
+            <div class="gameBox w1000">
+                <div class="gameBox1">
+                    <div class="title">新手推荐</div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#">永远的7日之都</a>
+                            </li>
+                            <li>
+                                <a href="#">火柴人联盟2</a>
+                            </li>
+                            <li>
+                                <a href="#">镇魂无双（预约）</a>
+                            </li>
+                            <li>
+                                <a href="#">悬空城</a>
+                            </li>
+                            <li>
+                                <a href="#">十万个冷笑话2</a>
+                            </li>
+                            <li>
+                                <a href="#">恶灵退散</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="gameBox2">
+                    <div class="title">手游</div>
+                    <div class="list">
+                        <div class="left">
+                            <ul>
+                                <li>
+                                    <a href="#">十万个冷笑话2</a>
+                                </li>
+                                <li>
+                                    <a href="#">罗小黑战记</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li>
+                                    <a href="#">悬空城</a>
+                                </li>
+                                <li>
+                                    <a href="#">恶灵退散</a>
+                                </li>
+                                <li>
+                                    <a href="#">少女咖啡枪</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="gameBox3">
+                    <div class="title">页游</div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#">镇魂街OL</a>
+                            </li>
+                            <li>
+                                <a href="#">众神之下</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 服务大厅 -->
+    <div class="service">
+        <div class="ser w1000">
+            <h2> <span></span>服务大厅</h2>
+        </div>
+        <ul class="w1000">
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">游戏充值</a></li>
+            <li><a href="#">在线客服</a></li>
+            <li><a href="#">游戏论坛</a></li>
+        </ul>
+        <div class="ser-call w1000">
+            <span>客服电话：010-67717717-8134</span>
+            <span>客服QQ： <a href="#">800002671</a></span>
+            <span>邮箱：game@u17.com</span>
+        </div>
+        <div class="footer">
+            <div class="footer1 w1000">
+                <div class="f-logo">
+                    <a href="#"><img src="images/bot_logo.png" alt=""></a>
+                </div>
+                <div class="ad">
+                    <a href="#"><img src="images/bbb071ceu1718a1u174b3cu17978au17f607a9e6a7ad.png" alt=""></a>
+                </div>
+                <div class="f-txt">
+                    <a href="#">妖气漫画</a>
+                    <span class="line">|</span>
+                    <a href="#">未成年人家长监护</a>
+                    <span class="line">|</span>
+                    <a href="#">帮助中心</a>
+                    <span class="line">|</span>
+                    <a href="#">京ICP备09080292号</a>
+                    <span class="line">|</span>
+                    <a href="#">京网文[2015]0019-019号</a><br>
+                     抵制不良游戏，拒绝盗版游戏。 注意自我保护，谨防受骗上当。<br>
+                     适度游戏益脑，沉迷游戏伤身。 合理安排时间，享受健康生活。
+                </div>
+                <div class="bot">
+                    <img src="images/bot_irow.png" alt="">
+                    
+                </div>
+                <div class="go-top">
+                    <a href="#"></a>
+                </div>
+                <span id="line"></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html> 

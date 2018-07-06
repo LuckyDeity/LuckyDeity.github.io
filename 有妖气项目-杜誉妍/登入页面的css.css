@@ -1,0 +1,355 @@
+/*初始化代码*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "微软雅黑";
+}
+
+/*a {*/
+    /*text-decoration: none;*/
+    /*color: #999;*/
+/*}*/
+
+input {
+    border: 0 auto;
+    outline: 0 auto;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+body {
+    overflow: hidden;
+}
+/*版心*/
+.w {
+    width: 100%;
+    height: 100%;
+}
+
+/*.background img {*/
+    /*width: 1920px;*/
+    /*height: 100%;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+
+/*背景图*/
+/*body{*/
+    /*/!*背景不随内容滚动*!/*/
+    /*/!*width: 100%;*!/*/
+    /*/!*height: 1000px;*!/*/
+    /*position: relative;*/
+    /*background: url('images/login_bg.jpg') no-repeat center;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+/*}*/
+
+
+
+/*.background{*/
+    /*/!*背景不随内容滚动*!/*/
+    /*width: 100%;*/
+    /*height: 1000px;*/
+    /*position: relative;*/
+    /*background: url('images/login_bg.jpg') no-repeat center;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+/*}*/
+/*.background {*/
+    /*/!*width: 1920px;*!/*/
+    /*/!*height: 1230px;*!/*/
+    /*/!*display: table-cell;*!/*/
+    /*/!*vertical-align: middle;*!/*/
+    /*/!*text-align: center;*!/*/
+    /*/!*width: 1530px;*!/*/
+    /*/!*height: 750px;*!/*/
+    /*/!*border: 1px solid #000;*!/*/
+    /*/!*height: 500px;*!/*/
+    /*/!*background-color: pink;*!/*/
+    /*/!*height: 100%;*!/*/
+    /*/!*border:1px solid #000;*!/*/
+    /*overflow: hidden;*/
+/*}*/
+/*.one {*/
+    /*/!*width: 2000px;*!/*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-color: gold;*/
+/*}*/
+
+/*.background img {*/
+    /*overflow: hidden;*/
+    /*/!*width: 1536px;*!/*/
+    /*display: block;*/
+    /*/!*width: 1200px;*!/*/
+    /*/!*height: 1230px;*!/*/
+    /*/!*text-align: center;*!/*/
+/*}*/
+
+/*装整个登入框的盒子*/
+.enter {
+    position: absolute;
+    width: 390px;
+    height: 387px;
+    background-color: #191e34;
+    top: 50%;
+    margin-top: -194px;
+    right: 13%;
+    opacity: 0.9;
+    border-radius: 4px;
+}
+
+/*装上面的盒子*/
+.enterBoxOne {
+    width: 388px;
+    height: 300px;
+    /*position: relative;*/
+    /*border: 1px solid #fff;*/
+}
+
+/*logo*/
+.enter_logo {
+    position: relative;
+    /*float: right;*/
+    width: 110px;
+    height: 45px;
+    display: block;
+    top: -55px;
+    right: -280px;
+    background: url("images/logo.png") no-repeat;
+}
+
+/*邮箱,手机,用户名*/
+.inputUsreName {
+    width: 340px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 3px solid #c2c2c2;
+    margin: 0 auto;
+    /*float: left;*/
+    margin-top: -18px;
+    /*padding-top: 18px;*/
+}
+
+.usName {
+    width: 290px;
+    height: 40px;
+    color: #aaa;
+    font-size: 18px;
+    padding-left: 10px;
+    float: left;
+    margin: 0 auto;
+}
+
+.spriteSheetRen {
+    width: 24px;
+    height: 24px;
+    background: url("images/icon2.png") no-repeat;
+    background-position: 0 0;
+    float: right;
+    /*border: 1px solid;*/
+    margin-top: 8px;
+    margin-right: 14px;
+}
+
+/*密码框*/
+.inputPassword {
+    /*float: left;*/
+    width: 340px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 3px solid #c2c2c2;
+    margin: 18px auto;
+}
+
+.password {
+    width: 290px;
+    height: 40px;
+    color: #aaa;
+    font-size: 18px;
+    padding-left: 10px;
+    float: left;
+    margin: 0 auto;
+}
+
+.spriteSheetLock {
+    width: 24px;
+    height: 24px;
+    background: url("images/icon2.png") 0px -85px;
+    float: right;
+    /*border: 1px solid;*/
+    margin-top: 8px;
+    margin-right: 14px;
+}
+
+/*记住登录*/
+.remember_login {
+    width: 342px;
+    height: 32px;
+    /*background-color: pink;*/
+    position: relative;
+    margin: 0 auto;
+}
+
+.remember_login i {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-top: 9px;
+}
+
+.checkbox {
+    background: url("images/check.png") no-repeat;
+    background-position: 0px -25px;
+}
+
+.icn {
+    background: url("images/check.png") no-repeat;
+    background-position: 0px 0px;
+}
+
+.remember_login p {
+    line-height: 32px;
+    font-size: 13px;
+    color: #6fc2de;
+}
+
+/*登录按钮*/
+.login {
+    display: block;
+    width: 342px;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 4px solid #b0661e;
+    border-radius: 2px;
+    background-color: #f19942;
+    margin: 15px 0 0 25px;
+    opacity: 0.9;
+}
+
+.loginStyle {
+    opacity: 1;
+}
+
+/*忘记密码*/
+.login_link_list {
+    width: 146px;
+    position: relative;
+    font-size: 13px;
+    color: #6fc2de;
+    margin: 15px auto;
+}
+
+.login_link_list a {
+    color: #6fc2de;
+}
+
+.one {
+    text-decoration: underline;
+}
+
+/*下面的精灵图*/
+/*包裹的盒子*/
+.login_wrapper {
+    width: 388px;
+    height: 75px;
+    padding-bottom: 10px;
+    position: absolute;
+    border: 1px solid #0e101b;
+    border-top: 1px solid #34354b;
+    border-radius: 0 0 4px 4px;
+}
+
+/*一键登录*/
+.One_click_login {
+    text-align: center;
+    font-size: 14px;
+    color: #6fc2de;
+    display: block;
+    padding-top: 10px;
+    position: relative;
+}
+
+/*精灵图*/
+.login_list {
+    position: relative;
+    margin: 14px 0 0 8px;
+}
+
+.login_list li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 35px;
+    border-left: 1px solid #4f5161;
+    border-right: 1px solid #08080e;
+    padding-right: 58px;
+    position: relative;
+}
+
+.login_list li a {
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.login_list li.qq {
+    border-left: none;
+}
+
+.login_list li.qq a {
+    /*border: 1px solid #fff;*/
+    left: 0px;
+    top: 0;
+    /*background: url("images/login_icon_qq.jpg") no-repeat;*/
+    /*background-position: -98px 0px;*/
+
+}
+
+.login_list li.wx a {
+    /*border: 1px solid #fff;*/
+    left: 0px;
+    /*background: url("images/login_icon_wx.png") no-repeat;*/
+    /*background-position: -117px -28px;*/
+}
+
+.login_list li.sina a {
+    /*border: 1px solid #fff;*/
+    left: 0px;
+    /*background: url("images/login_icon_sina.jpg") no-repeat;*/
+    /*background-position: -126px 0px;*/
+}
+
+.login_list li.sdo {
+    border-right: none;
+}
+
+.login_list li.sdo a {
+    /*border: 1px solid #fff;*/
+    left: 0px;
+    /*background: url("images/login_icon_sdo.jpg") no-repeat;*/
+    /*background-position: -153px 0px;*/
+}

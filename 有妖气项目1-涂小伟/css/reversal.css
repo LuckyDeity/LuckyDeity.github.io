@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.content-ding {
+    height: 500px;
+    background-coloR: #ffffff;
+}
+
+.content_top {
+    height: 97px;
+    overflow: hidden;
+}
+
+.btncolor {
+    background: url("../pictures/comiclist_ico.png") no-repeat 0px -563px;
+}
+
+
+/* 头部左侧的精灵图 */
+
+.content_top .icon {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    float: left;
+    margin-top: 28px;
+    margin-left: 38px;
+    background: url("../pictures/comiclist_ico.png") -0px -187px;
+}
+
+.content_top h2 {
+    float: left;
+    width: 160px;
+    height: 32px;
+    font-size: 32px;
+    margin-left: 13px;
+    line-height: 32px;
+    margin-top: 35px;
+    /* margin-right: 42px; */
+}
+
+.content_top ul {
+    margin-top: 35px;
+}
+
+.content_top ul li {
+    float: left;
+    width: 60px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+}
+
+
+/*右边更多*/
+
+.content_top .content_right {
+    float: right;
+    height: 30px;
+    width: 100px;
+    margin-right: 10px;
+    position: relative;
+}
+
+
+/*右边字体更多*/
+
+.content_top .content_right .gengduo {
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    padding-right: 18px;
+}
+
+
+/*右边图标更多*/
+
+.content_top .content_right .gengduo_inco {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: right;
+    background: url("../pictures/comiclist_ico.png") 33px -517px;
+}
+
+
+/* 轮播图 开始*/
+
+.content_comic div ul {
+    position: relative;
+    width: 4500px;
+    background-color: red;
+}
+
+
+/* 按钮 */
+
+.content_comic .btn {
+    /* display: none; */
+    position: relative;
+}
+
+.content_comic .btn span {
+    height: 215px;
+    width: 40px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* background-color: green; */
+    position: absolute;
+    font-size: 32px;
+    text-align: center;
+    color: #595959;
+    padding-top: 185px;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.content_comic span:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* background-color: red; */
+}
+
+.content_comic .btn span.left {
+    display: none;
+}
+
+.content_comic .btn span.right {
+    position: absolute;
+    right: 4px;
+}
+
+
+/* 轮播图大盒子 */
+
+.content_slideshow {
+    overflow: hidden;
+}
+
+
+/* 精灵图 小图标 */
+
+.content_slideshow ul li a.two i {
+    width: 18px;
+    height: 18px;
+    font-weight: bolder;
+    display: inline-block;
+    background: url("../pictures/comiclist_ico.png") 0px -473px;
+}
+
+.content .content_comic li {
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    height: 400px;
+    position: relative;
+}
+
+.content .content_comic ul {
+    margin-left: 5px;
+}
+
+.content .content_comic li a.one {
+    display: block;
+    width: 240px;
+}
+
+.content .content_comic li a.two {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.content .content_comic li.one {
+    display: none;
+}
+
+.content .content_comic li.block {
+    display: block;
+}
+
+.content .content_comic li p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.content .content_comic li a img {
+    border: 0 none;
+    width: 240px;
+    height: 300px;
+    display: block;
+    /* transition: all 1.5s; */
+}
+
+img:hover {
+    /* transform: rotateY(180deg); */
+}
